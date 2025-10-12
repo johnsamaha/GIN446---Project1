@@ -5,87 +5,158 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Article 5 - History and Evolution of CSS" />
   <meta name="author" content="John SAMAHA" />
-  <link rel="icon" href="../assets/favicon.png" type="image/png">
+  <link rel="icon" href="../assets/favicon.png" type="image/png"/>
+  <link rel="stylesheet" href="styles.css">
   <title>History of CSS</title>
 </head>
-<hr>
 
-<body bgcolor="#caddde">
-    
-    <header>
-        <h1> Article 5 - The Evolution of CSS.</h1>
-        <p class="last-updated"> Last updated: September 28,2025</p>
-     
-        <nav aria-label="Navigation">
-        <ul>
-            <li><a href="index.html" title="Back to Home page"> Home</a></li>
-            <li><a href="references.html" title="References page"> References</a></li>
-        </ul>
+<body>
+    <!-- General Website Header -->
+  <header class="header-glass">
+    <div class="container">
+      <div class="header-content">
+        <div class="logo">ResearchHub by J</div>
+        <nav>
+          <ul class="nav-tabs">
+            <li><a href="index.html" title="Back to Home page" class="nav-tab">Home</a></li>
+            <li><a href="references.html" title="References page" class="nav-tab">References</a></li>
+          </ul>
         </nav>
-    </header>
-    <hr>
-    <main>
-        <article>
-            <header>
-                <h2> A Short History of Cascading Style Sheet</h2>
-                <p><i>There is no exquisite beauty... without some strangeness in the proportion</i></p>
-            </header>
+      </div>
+    </div>
+  </header>  
 
-            <section aria-labelledby="Introduction">
-                <h3 id="introduction"></h3>
-                <p>Cascading Style Sheet (CSS) is a core technology of the World Wide Web, alongside HTML and JavaScript. It is a style sheet language that describes how HTML or XML documents are presented on screen, paper, or other media. The origin of CSS dates back to the mid-1990s, when the web was still a text-heavy environment and designers sought ways to separate content from presentation.</p>
+<main class="main-content">
+    <article>
+      <div class="container">
+
+        <!-- Article Header -->
+        <section class="article-header">
+          <h1 class="article-title">Article 5 - The Evolution of CSS</h1>
+          <p class="article-meta">Cascading Style Sheet History | Last updated: October 13, 2025</p>
+        </section>
+
+    <div class="article-content">
+          <!-- Subtitle -->
+          <section class="card article-section">
+            <h2>A Short History of Cascading Style Sheet</h2>
+            <blockquote>
+             <p><em>There is no exquisite beauty... without some strangeness in the proportion</em></p>
+            </blockquote>
+
+            <!-- Introduction -->
+            <section aria-labelledby="introduction">
+              <h3 id="introduction">Introduction</h3>
+              <p>
+                 Cascading Style Sheet (CSS) is a core technology of the World Wide Web, alongside HTML and JavaScript. It is a style sheet language that describes how HTML or XML documents are presented on screen, paper, or other media. The origin of CSS dates back to the mid-1990s, when the web was still a text-heavy environment and designers sought ways to separate content from presentation.</p>
+              </p>
             </section>
+          </section>
 
-             <section aria-labelledby="Idea">
-                <h3 id="Idea"> The Idea Behind it.</h3>
-              <p>The idea of CSS was first proposed by Håkon Wium Lie in October 1994 while working at CERN, the European Organization for Nuclear Research. At the time, the World Wide Web had grown significantly, but HTML lacked mechanisms for controlling fonts, layouts, and colors beyond very basic attributes. Lie envisioned a standardized way to control the presentation of documents without embedding style information directly into the HTML structure. Shortly thereafter, Lie collaborated with Bert Bos, who had developed the Argo browser and had similar ideas about style sheets, leading to the refinement of CSS into a formal proposal... <a href="https://www.w3.org/People/howcome/p/cascade.html " target="_blank" rel="noopener" title="Read on W3" >[5.1]</a>.</a>
-</p>
-<center>
-<figure>
-    <img src="../assets/CSS_History Images/logo-html5-css3.png" alt="LOGOs of HTML5 and CSS3" width="500">
-    <figcaption> Figure 1: HTML5 and CSS3 Logos</figcaption>
-</figure>
 
-</center>
+          <section aria-labelledby="idea" class="card article-section">
+            <h3 id="idea">The Idea Behind it.</h3>
+            <p>
+                The idea of CSS was first proposed by Håkon Wium Lie in October 1994 while working at CERN, the European Organization for Nuclear Research. At the time, the World Wide Web had grown significantly, but HTML lacked mechanisms for controlling fonts, layouts, and colors beyond very basic attributes. Lie envisioned a standardized way to control the presentation of documents without embedding style information directly into the HTML structure. Shortly thereafter, Lie collaborated with Bert Bos, who had developed the Argo browser and had similar ideas about style sheets, leading to the refinement of CSS into a formal proposal... <a href="https://www.w3.org/People/howcome/p/cascade.html " target="_blank" rel="noopener" title="Read on W3" class="reference-link" >[5.1]</a>.</a>            
+            </p>
+            <figure>
+              <img src="../assets/CSS_History Images/logo-html5-css3.png" alt="LOGOs of HTML5 and CSS3" width="600" />
+              <figcaption>Figure 1: HTML5 and CSS3 Logos</figcaption>
+            </figure>
+          </section>
 
-            </section>
-            
-            <section aria-labelledby="Evolution">
-                <h3 id="Evolution"> CSS Evolution</h3>
-                <p>
+
+        <section aria-labelledby="evolution" class="card article-section">
+            <h3 id="evolution">CSS Evolution</h3>
+           <p>
                     <ol>
-                        <li>The first official CSS specification, known as CSS1, was published by the World Wide Web Consortium (W3C) in December 1996. CSS1 included basic styling features such as fonts, colors, and simple layout controls. It marked an important step toward the separation of structure (HTML) and style (CSS), thereby promoting cleaner code and easier maintenance  <a href="https://www.w3.org/TR/REC-CSS1/" target="_blank" rel="noopener" title="Read on W3">[5.2]</a>.</li>
-                        <li>Two years later, CSS2 was released in 1998, expanding capabilities significantly. CSS2 introduced positioning (absolute, relative, fixed), z-index stacking, and media-specific style sheets (e.g: styles for print vs. screen). However, browser support was inconsistent in the early 200s, slowing adoption and frustrating developers <a href="https://www.w3.org/TR/CSS2/" target="_blank" rel="noopener" title="Read on W3" >[5.3]</a>.</li>
-                        <li>To address ambiguities and improve interoperability, the CSS2.1 specification was developed as a revision, which became a W3C Recommendation in June 2011. This version removed poorly implemented features and clarified others, making it a stable reference for browser vendors and developers  <a href="https://www.w3.org/TR/CSS2/" target="_blank" rel="noopener" title="Read on W3" >[5.4]</a>.</li>
-                        <li>The next major evolution came with CSS3, but unlike earlier versions, it was not a single monolithic specification. Instead, CSS3 was divided into independent modules, each covering specific aspects such as selectors, backgrounds, borders, text effects, transitions, animations, and layout models like Flexbox and Grid. This modular approach allowed parts of CSS to evolve independently at different speeds, enabling faster standardization and implementation <a href="https://www.w3.org/TR/css-2023/ " target="_blank" rel="noopener" title="Read on W3">[5.5]</a>.</li>
+                        <li>The first official CSS specification, known as CSS1, was published by the World Wide Web Consortium (W3C) in December 1996. CSS1 included basic styling features such as fonts, colors, and simple layout controls. It marked an important step toward the separation of structure (HTML) and style (CSS), thereby promoting cleaner code and easier maintenance  <a href="https://www.w3.org/TR/REC-CSS1/" target="_blank" rel="noopener" title="Read on W3" class="reference-link">[5.2]</a>.</li>
+                        <br> <li>Two years later, CSS2 was released in 1998, expanding capabilities significantly. CSS2 introduced positioning (absolute, relative, fixed), z-index stacking, and media-specific style sheets (e.g: styles for print vs. screen). However, browser support was inconsistent in the early 200s, slowing adoption and frustrating developers <a href="https://www.w3.org/TR/CSS2/" target="_blank" rel="noopener" title="Read on W3" class="reference-link">[5.3]</a>.</li>
+                        <br> <li>To address ambiguities and improve interoperability, the CSS2.1 specification was developed as a revision, which became a W3C Recommendation in June 2011. This version removed poorly implemented features and clarified others, making it a stable reference for browser vendors and developers  <a href="https://www.w3.org/TR/CSS2/" target="_blank" rel="noopener" title="Read on W3" class="reference-link" >[5.4]</a>.</li>
+                        <br> <li>The next major evolution came with CSS3, but unlike earlier versions, it was not a single monolithic specification. Instead, CSS3 was divided into independent modules, each covering specific aspects such as selectors, backgrounds, borders, text effects, transitions, animations, and layout models like Flexbox and Grid. This modular approach allowed parts of CSS to evolve independently at different speeds, enabling faster standardization and implementation <a href="https://www.w3.org/TR/css-2023/ " target="_blank" rel="noopener" title="Read on W3" class="reference-link">[5.5]</a>.</li>
                     </ol>
                 </p>
-            </section>
+          </section>
+                
+        <section aria-labelledby="Conclusion" class="card article-section">
+            <h3 id="conclusion">Nowadays</h3>
+            <p>
+            In the moder web, CSS continues to develop under the W3C and WHATWG through modular specifications. Features like CSS Grid Layout (2017) and CSS Subgrid (2023) have transformed web design, providing developers with powerful tools for responsive and flexible layouts. Today, CSS stands as an essential component of the web platform, enabling the rich, dynamic, and visually engaging experiences that users expect.
+            </p>
+          </section>
+        </div>
+       <!-- Article Footer -->
+  <div class="article-nav">
+    <a href="index.html" class="nav-prev">← Back to Home</a>
+    <a href="references.html#article5" title="References page" class="nav-next">References →</a>
+  </div>
 
+  <!-- Related Articles -->
+  <section class="related-articles">
+    <h3>Related Articles</h3>
+    <div class="related-grid">
+      <a href="security.html" class="related-card">
+        <h4>Security on the Web/Internet</h4>
+        <p>Common risks and safe practices for online security</p>
+      </a>
+      <a href="history.html" class="related-card">
+              <h4>History of the Web & Browsers</h4>
+              <p>Milestones, Evolution, Trends, Future</p>
+            </a>
+      <a href="mobile-first.html" class="related-card">
+        <h4>Mobile-First Development</h4>
+        <p>Principles of mobile-first web development</p>
+      </a>
+    </div>
+  </section>
+      </div>
             
-
-            <section aria-labelledby="Conclusion">
-                <h3 id="Conclusion"></h3>
-                <p>In the moder web, CSS continues to develop under the W3C and WHATWG through modular specifications. Features like CSS Grid Layout (2017) and CSS Subgrid (2023) have transformed web design, providing developers with powerful tools for responsive and flexible layouts. Today, CSS stands as an essential component of the web platform, enabling the rich, dynamic, and visually engaging experiences that users expect. </p>
-            </section>
         </article>
 
     </main>
 
 
-<hr>
-</body>
+<!-- Back to Top -->
+  <a href="#" class="back-to-top visible" id="backToTop">↑</a>
 
-<footer>
-    <a href="references.html" title="References page">References</a>
-     | 
-    <a href="index.html">  Back to Home</a>
-    <p>John SAMAHA - 2025</p>
-    <p>
-      <a href="https://www.linkedin.com/in/john-samaha/" target="_blank" rel="noopener" title="Visit John SAMAHA LinkedIn profile">
-        <img src="../assets/LinkedIn_icon.png.png" alt="LinkedIn profile of John SAMAHA" width="16" height="16">
-      @john-samaha
-    </a>
-    </p>
-    <p><strong> AI-use disclosure:</strong> Portions of this site were generated/authored with assistance from an AI (Chat GPT-5 Thinking mini). AI content was reviewed, edited and checked to ensure accuracy.</p>
-</footer>
+  <!-- General Website Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>ResearchHub by J</h3>
+          <p>Research and website development.</p>
+        </div>
+
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="extras.html">On-The-Go Questions</a></li>
+            <li><a href="../welcome.html">Welcome Hub</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h3>Connect</h3>
+          <ul class="footer-links">
+            <li>
+              <a href="https://www.linkedin.com/in/john-samaha/" target="_blank" rel="noopener">
+                <img src="../assets/LinkedIn_icon.png.png" alt="LinkedIn profile of John SAMAHA" width="16" height="16" />
+                LinkedIn
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>John SAMAHA - 2025 | GIN446 Web Programming Project</p>
+        <p>
+          <strong>AI-use disclosure:</strong> Portions of this site were generated/authored with assistance from an AI (Chat GPT-5 Thinking mini). AI content was reviewed, edited, and checked to ensure accuracy.
+        </p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

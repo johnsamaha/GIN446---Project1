@@ -3,110 +3,168 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Article 2 - Security on the Web/Internet  (Common Risks & Safe Practices)" />
+  <meta name="description" content="Article 2 - Security on the Web/Internet (Common Risks & Safe Practices)" />
   <meta name="author" content="John SAMAHA" />
-  <link rel="icon" href="../assets/favicon.png" type="image/png">
+  <link rel="icon" href="../assets/favicon.png" type="image/png" />
+  <link rel="stylesheet" href="styles.css" />
   <title>Security on the Web/Internet</title>
 </head>
-<hr>
 
-<body bgcolor="#caddde">
-    <header>
-        <h1> Article 2 - Security on the Web/Internet - Common Risks & Safe Practices.</h1>
-        <p class="last-updated"> Last updated: September 18,2025</p>
-     
-        <nav aria-label="Navigation">
-        <ul>
-            <li><a href="index.html" title="Back to Home page"> Home</a></li>
-            <li><a href="references.html" title="References page"> References</a></li>
-        </ul>
+<body>
+  <!-- General Website Header -->
+  <header class="header-glass">
+    <div class="container">
+      <div class="header-content">
+        <div class="logo">ResearchHub by J</div>
+        <nav>
+          <ul class="nav-tabs">
+            <li><a href="index.html" title="Back to Home page" class="nav-tab">Home</a></li>
+            <li><a href="references.html" title="References page" class="nav-tab">References</a></li>
+          </ul>
         </nav>
-    </header>
-    <hr>
-    <main>
-        <article>
-            <header>
-                <h2> Risks, Technologies, and Best Practices</h2>
-                <p><i>The weakest link in cybersecurity is the human being… Think before you click</i></p>
- <center>
-<figure>
-    <img src="../assets/Security Images/S2.jpg" alt="Image showing Phishing  Methods" width="500">
-    <figcaption> Figure 1: Introducive Image - Phishing</figcaption>
-</figure> 
-</center>
-<br>
+      </div>
+    </div>
+  </header>
 
-            </header>
-        
+  <main class="main-content">
+    <article>
+      <div class="container">
 
-            <section aria-labelledby="Introduction">
-                <h3 id="introduction"></h3>
-                <p>The Internet can be defined as a global system of interconnected computer networks that communicate using Internet Protocols (IP). </p>
-                <p>Web security involves a combination of technologies, protocols, and practices designed to protect websites, web applications, servers, and online data from internet-based cyberattacks like malware, phishing, and data breaches. These threats may compromise data confidentiality, integrity, or availability <a href="https://en.wikipedia.org/wiki/Internet_security" target="_blank" rel="noopener" title="Read [2.1] on Wikipedia">[2.1]</a>.</p>
-                <p>As reliance on digital services grows, web security has become a critical concern for individuals, businesses, and governments worldwide.</p>
-            </section>
+        <!-- Article Header -->
+        <section class="article-header">
+          <h1 class="article-title">Article 2 - Security on the Web/Internet</h1>
+          <p class="article-meta">Common Risks & Safe Practices | Last updated: October 12, 2025</p>
+        </section>
 
-             <section aria-labelledby="Risks">
-                <h3 id="Risks"> Common Risks on the Web.</h3>
-              <p>One of the most significant risks is malware, a general term for malicious software such as viruses, worms, and ransomware. This malicious software infiltrates systems to cause damage or steal information <a href="https://www.kaspersky.com/resource-center/threats/malware" target="_blank" rel="noopener" title="Read [2.2] on Kaspersky">[2.2]</a>. Attackers often use techniques like phishing, where deceptive emails or websites tricks users into revealing sensitive information such as passwords or financial details 
-<a href="https://www.cisa.gov/topics/cybersecurity-best-practices" target="_blank" rel="noopener" title="Read [2.3] on CISA">[2.3]</a>. </p>
-              <p>Another type of threat is the Distributed Denial of Services (DDoS) attack, where attackers overwhelm a website or server with excessive traffic, making it unavailable to legitimate users <a href="https://www.kaspersky.com/resource-center/threats/malware" target="_blank" rel="noopener" title="Read [2.2] on Kaspersky">[2.2]</a>. Similarly to DDoS attacks, they commonly perform web application vulnerabilities such as SQL injection and cross-site scripting (XSS), that allows them to manipulate databases or inject malicious code into web pages <a href="https://owasp.org/www-project-top-ten/" target="_blank" rel="noopener" title="Read [2.4] on OWASP">[2.4]</a>. </p>
-              <p>Data privacy is at risk too, through man-in-the-middle (MITM) attacks, in which an attacker intercepts communication between a user and a website, capturing login credentials or sensitive data 
-<a href="https://www.cisa.gov/topics/cybersecurity-best-practices" target="_blank" rel="noopener" title="Read [2.3] on CISA">[2.3]</a>. As the Internet of Things (IoT) expands more and more, the poorly secured devices further increase the surface of attack <a href="https://spectrum.ieee.org/sensor-cybersecurity-standards" target="_blank" rel="noopener" title="Read [2.5] on IEEE Spectrum">[2.5]</a>. </p>
+        <div class="article-content">
+          <!-- Subtitle -->
+          <section class="card article-section">
+            <h2>Risks, Technologies, and Best Practices</h2>
+            <blockquote>
+              <p><em>The weakest link in cybersecurity is the human being… Think before you click.</em></p>
+            </blockquote>
 
-<center>
-<figure>
-    <img src="../assets/Security Images/S1.webp" alt="7 common web security threats: Phishing, ransomware, SQL injection, cross-site scripting, Distributed Denial of Service (DDoS) Attack, Viruses and worms, Spyware." width="500">
-    <figcaption> Figure 2: 7 Common Web Security Threats</figcaption>
-</figure>
+            <figure class="center-figure">
+              <img src="../assets/Security Images/S2.jpg" alt="Image showing Phishing Methods" width="500">
+              <figcaption>Figure 1: Introductive Image - Phishing</figcaption>
+            </figure>
+          </section>
 
-<figure>
-    <img src="../assets/Security Images/S3.jpg" alt="Image showing the MITM, man in the middle" width="500">
-    <figcaption> Figure 3: Man-in-the-Middle (MITM)</figcaption>
-</figure>
-</center>
-</section>
-            <br>
+          <!-- Introduction -->
+          <section class="card article-section" aria-labelledby="introduction">
+            <h3 id="introduction">Introduction</h3>
+            <p>The Internet can be defined as a global system of interconnected computer networks that communicate using Internet Protocols (IP).</p>
+            <p>Web security involves a combination of technologies, protocols, and practices designed to protect websites, web applications, servers, and online data from internet-based cyberattacks like malware, phishing, and data breaches. These threats may compromise data confidentiality, integrity, or availability <a href="https://en.wikipedia.org/wiki/Internet_security" target="_blank" rel="noopener" title="Read [2.1] on Wikipedia" class="reference-link">[2.1]</a>.</p>
+            <p>As reliance on digital services grows, web security has become a critical concern for individuals, businesses, and governments worldwide.</p>
+          </section>
 
-            <section aria-labelledby="Safe">
-                <h3 id="Safe"> Safe Practices for Users and Organizations.</h3>
-               <p>To counter these risks users and organizations must adopt security practices.</p>
-               <p>Individuals must always use strong and unique passwords; it is an essential measure. A strong password typically contains a mix of uppercase and lowercase letters, numbers, and special characters, and should never be reused across services <a href="https://www.kaspersky.com/resource-center/threats/malware" target="_blank" rel="noopener" title="Read [2.2] on Kaspersky">[2.2]</a>. Multi-Factor authentication (MFA), which requires additional verification beyond a password, provides another layer of defense (for e.g.: Microsoft Authenticator).</p>
-               <p>Organization should prioritize Secure Socket Layer/ Transport Layer Security (SSL/TLS) encryption to protect transmitted data between users and servers <a href="https://owasp.org/www-project-top-ten/" target="_blank" rel="noopener" title="Read [2.4] on OWASP">[2.4]</a>. SSL/TLS are cryptographic protocols that provide security for internet communications by encrypting data between a client and a server, ensuring privacy, authenticity and data integrity. </p>
-               <p>Regular software updates and patches are critical in closing vulnerabilities that attackers might exploit. Firewalls and intrusion detection systems help monitor and block suspicious activities on networks.</p>
-               <p>Education and awareness also play a key role. Employees and students who are trained in recognizing phishing attempts and suspicious links are less likely to fall victim to attacks <a href="https://spectrum.ieee.org/sensor-cybersecurity-standards" target="_blank" rel="noopener" title="Read [2.5] on IEEE Spectrum">[2.5]</a>. Furthermore, adopting the principle of least privilege, consisting of limiting user access rights to only what is necessary, reduces the potential impact of compromised accounts.</p>
-            </section>
+          <!-- Common Risks -->
+          <section class="card article-section" aria-labelledby="risks">
+            <h3 id="risks">Common Risks on the Web</h3>
+            <p>One of the most significant risks is malware, a general term for malicious software such as viruses, worms, and ransomware. This malicious software infiltrates systems to cause damage or steal information <a href="https://www.kaspersky.com/resource-center/threats/malware" target="_blank" rel="noopener" title="Read [2.2] on Kaspersky" class="reference-link">[2.2]</a>. Attackers often use techniques like phishing, where deceptive emails or websites trick users into revealing sensitive information such as passwords or financial details <a href="https://www.cisa.gov/topics/cybersecurity-best-practices" target="_blank" rel="noopener" title="Read [2.3] on CISA" class="reference-link">[2.3]</a>.</p>
+            <p>Another type of threat is the Distributed Denial of Service (DDoS) attack, where attackers overwhelm a website or server with excessive traffic, making it unavailable to legitimate users <a href="https://www.kaspersky.com/resource-center/threats/malware" target="_blank" rel="noopener" title="Read [2.2] on Kaspersky" class="reference-link">[2.2]</a>. Similarly, web application vulnerabilities such as SQL injection and cross-site scripting (XSS) allow attackers to manipulate databases or inject malicious code into web pages <a href="https://owasp.org/www-project-top-ten/" target="_blank" rel="noopener" title="Read [2.4] on OWASP" class="reference-link">[2.4]</a>.</p>
+            <p>Data privacy is at risk through man-in-the-middle (MITM) attacks, where an attacker intercepts communication between a user and a website, capturing login credentials or sensitive data <a href="https://www.cisa.gov/topics/cybersecurity-best-practices" target="_blank" rel="noopener" title="Read [2.3] on CISA" class="reference-link">[2.3]</a>. As the Internet of Things (IoT) expands, poorly secured devices further increase the attack surface <a href="https://spectrum.ieee.org/sensor-cybersecurity-standards" target="_blank" rel="noopener" title="Read [2.5] on IEEE Spectrum" class="reference-link">[2.5]</a>.</p>
 
-            <section aria-labelledby="Trends">
-                <h3 id="Trends">Emerging Trends in Web Security.</h3>
-               <p>Zero Trust Architecture (ZTA), in recent years, emerged as a leading security model. Unlike traditional defenses, ZTA assumes that no user or device is inherently trustworthy and continuously verifies identity and access privileges 
-<a href="https://csrc.nist.gov/publications/detail/sp/800-207/final" target="_blank" rel="noopener" title="Read [2.6] on NIST">[2.6]</a>. </p>
-               <p>Additionally, the growing use of artificial intelligence (AI) and machine learning allows security systems to detect anomalies and respond to threats in real time 
-<a href="https://csrc.nist.gov/publications/detail/sp/800-207/final" target="_blank" rel="noopener" title="Read [2.6] on NIST">[2.6]</a>. </p>
-               <p>The rise of cloud computing also requires enhanced web security strategies. That’s why cloud providers and clients must collaborate to ensure secure configurations, compliance with regulations such as the General Data Protection Regulation (GDPR), and robust data backup mechanisms <a href="https://www.enisa.europa.eu/sites/default/files/all_files/ENISA%20-%20Cloud%20Computing%20-%20final.pdf" target="_blank" rel="noopener" title="Read [2.7] on ENISA">[2.7]</a>.</p>
-            </section>
+            <figure class="center-figure">
+              <img src="../assets/Security Images/S1.webp" alt="7 common web security threats: Phishing, ransomware, SQL injection, cross-site scripting, Distributed Denial of Service (DDoS) Attack, Viruses and worms, Spyware." width="500">
+              <figcaption>Figure 2: 7 Common Web Security Threats</figcaption>
+            </figure>
 
-            <section aria-labelledby="Conclusion"></section>
-                <h3 id="Conclusion"></h3>
-                <p>Web security is a continuously evolving challenge. As new technologies and services expand the digital ecosystem, attackers also develop more advanced techniques. Protecting users and data requires a layered approach that combines technical safeguards, user education, and proactive policy development. Ultimately, maintaining a secure web environment is not a one-time effort but an ongoing process of vigilance and adaptation. </p>
-            </section>
-        </article>
-    </main>
+            <figure class="center-figure">
+              <img src="../assets/Security Images/S3.jpg" alt="Image showing the MITM, man in the middle" width="500">
+              <figcaption>Figure 3: Man-in-the-Middle (MITM)</figcaption>
+            </figure>
+          </section>
 
+          <!-- Safe Practices -->
+          <section class="card article-section" aria-labelledby="safe">
+            <h3 id="safe">Safe Practices for Users and Organizations</h3>
+            <p>To counter these risks, users and organizations must adopt security practices.</p>
+            <p>Individuals must always use strong and unique passwords; it is an essential measure. A strong password typically contains a mix of uppercase and lowercase letters, numbers, and special characters, and should never be reused across services <a href="https://www.kaspersky.com/resource-center/threats/malware" target="_blank" rel="noopener" title="Read [2.2] on Kaspersky" class="reference-link">[2.2]</a>. Multi-Factor Authentication (MFA), which requires additional verification beyond a password, provides another layer of defense.</p>
+            <p>Organizations should prioritize Secure Socket Layer / Transport Layer Security (SSL/TLS) encryption to protect transmitted data between users and servers <a href="https://owasp.org/www-project-top-ten/" target="_blank" rel="noopener" title="Read [2.4] on OWASP" class="reference-link">[2.4]</a>. SSL/TLS are cryptographic protocols that provide security for internet communications by encrypting data between a client and a server, ensuring privacy, authenticity, and data integrity.</p>
+            <p>Regular software updates and patches are critical in closing vulnerabilities that attackers might exploit. Firewalls and intrusion detection systems help monitor and block suspicious activities on networks.</p>
+            <p>Education and awareness also play a key role. Employees and students trained in recognizing phishing attempts and suspicious links are less likely to fall victim to attacks <a href="https://spectrum.ieee.org/sensor-cybersecurity-standards" target="_blank" rel="noopener" title="Read [2.5] on IEEE Spectrum" class="reference-link">[2.5]</a>. Adopting the principle of least privilege, limiting user access rights to only what is necessary, reduces the potential impact of compromised accounts.</p>
+          </section>
 
-<hr>
+          <!-- Emerging Trends -->
+          <section class="card article-section" aria-labelledby="trends">
+            <h3 id="trends">Emerging Trends in Web Security</h3>
+            <p>Zero Trust Architecture (ZTA) has emerged as a leading security model. Unlike traditional defenses, ZTA assumes that no user or device is inherently trustworthy and continuously verifies identity and access privileges <a href="https://csrc.nist.gov/publications/detail/sp/800-207/final" target="_blank" rel="noopener" title="Read [2.6] on NIST" class="reference-link">[2.6]</a>.</p>
+            <p>Additionally, the growing use of artificial intelligence (AI) and machine learning allows security systems to detect anomalies and respond to threats in real time <a href="https://csrc.nist.gov/publications/detail/sp/800-207/final" target="_blank" rel="noopener" title="Read [2.6] on NIST" class="reference-link">[2.6]</a>.</p>
+            <p>The rise of cloud computing also requires enhanced web security strategies. Cloud providers and clients must collaborate to ensure secure configurations, compliance with regulations such as GDPR, and robust data backup mechanisms <a href="https://www.enisa.europa.eu/sites/default/files/all_files/ENISA%20-%20Cloud%20Computing%20-%20final.pdf" target="_blank" rel="noopener" title="Read [2.7] on ENISA" class="reference-link">[2.7]</a>.</p>
+          </section>
+
+          <!-- Conclusion -->
+          <section class="card article-section" aria-labelledby="conclusion">
+            <h3 id="conclusion">Conclusion</h3>
+            <p>Web security is a continuously evolving challenge. As new technologies and services expand the digital ecosystem, attackers also develop more advanced techniques. Protecting users and data requires a layered approach that combines technical safeguards, user education, and proactive policy development. Ultimately, maintaining a secure web environment is not a one-time effort but an ongoing process of vigilance and adaptation.</p>
+          </section>
+
+        </div>
+
+        <!-- Article Navigation -->
+        <div class="article-nav">
+          <a href="index.html" class="nav-prev">← Back to Home</a>
+          <a href="references.html#article2" class="nav-next" title="References page">References →</a>
+        </div>
+
+        <!-- Related Articles -->
+        <section class="related-articles">
+          <h3>Related Articles</h3>
+          <div class="related-grid">
+            <a href="stats.html" class="related-card">
+              <h4>Internet Stats (Middle East & Lebanon)</h4>
+              <p>Adoption, Usage, Speed</p>
+            </a>
+            <a href="CSS_History.html" class="related-card">
+              <h4>The Evolution of CSS</h4>
+              <p>History and development of Cascading Style Sheets</p>
+            </a>
+            <a href="history.html" class="related-card">
+              <h4>History of the Web & Browsers</h4>
+              <p>Milestones, Evolution, Trends, Future</p>
+            </a>
+          </div>
+        </section>
+
+      </div>
+      </div>
+    </article>
+  </main>
+
+  <!-- Back to Top -->
+  <a href="#" class="back-to-top visible" id="backToTop">↑</a>
+
+  <!-- General Website Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>ResearchHub by J</h3>
+          <p>Research and website development.</p>
+        </div>
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="extras.html">On-The-Go Questions</a></li>
+            <li><a href="../welcome.html">Welcome Hub</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Connect</h3>
+          <ul class="footer-links">
+            <li><a href="https://www.linkedin.com/in/john-samaha/" target="_blank" rel="noopener">
+              <img src="../assets/LinkedIn_icon.png.png" alt="LinkedIn profile of John SAMAHA" width="16" height="16"> LinkedIn
+            </a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>John SAMAHA - 2025 | GIN446 Web Programming Project</p>
+        <p><strong>AI-use disclosure:</strong> Portions of this site were generated/authored with assistance from an AI (Chat GPT-5 Thinking mini). AI content was reviewed, edited and checked to ensure accuracy.</p>
+      </div>
+    </div>
+  </footer>
 </body>
-
-<footer>
-    <a href="references.html" title="References page">References</a>
-     | 
-    <a href="index.html">  Back to Home</a>
-    <p>John SAMAHA - 2025</p>
-    <p>
-      <a href="https://www.linkedin.com/in/john-samaha/" target="_blank" rel="noopener" title="Visit John SAMAHA LinkedIn profile">
-        <img src="../assets/LinkedIn_icon.png.png" alt="LinkedIn profile of John SAMAHA" width="16" height="16">
-      @john-samaha
-    </a>
-    </p>
-    <p><strong> AI-use disclosure:</strong> Portions of this site were generated/authored with assistance from an AI (Chat GPT-5 Thinking mini). AI content was reviewed, edited and checked to ensure accuracy.</p>
-</footer>
+</html>
