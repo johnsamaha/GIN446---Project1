@@ -656,8 +656,28 @@ figcaption {
   box-shadow: var(--shadow-md);
 }
 
+/* Print Styles for Articles */
+@media print {
+  .header-glass,
+  .site-footer,
+  .back-to-top,
+  .article-nav {
+    display: none;
+  }
+  
+  .card {
+    box-shadow: none;
+    border: 1px solid #ccc;
+  }
+  
+  .hero-section {
+    background: #f0f0f0 !important;
+    color: black !important;
+  }
+}
 
-/* Timeline Styles */
+
+    /* Timeline Styles */
     .timeline {
       position: relative;
       padding: var(--space-6) 0;
@@ -790,25 +810,3 @@ figcaption {
         gap: var(--space-2);
       }
     }
-
-
-
-/* Print Styles for Articles */
-@media print {
-  .header-glass,
-  .site-footer,
-  .back-to-top,
-  .article-nav {
-    display: none;
-  }
-  
-  .card {
-    box-shadow: none;
-    border: 1px solid #ccc;
-  }
-  
-  .hero-section {
-    background: #f0f0f0 !important;
-    color: black !important;
-  }
-}
