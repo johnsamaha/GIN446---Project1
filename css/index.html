@@ -5,60 +5,137 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Homepage linking to articles, researches and references." />
   <meta name="author" content="John SAMAHA" />
-  <link rel="icon" href="../assets/favicon.png" type="image/png">
+  <link rel="icon" href="../assets/favicon.png" type="image/png" />
   <link rel="stylesheet" href="styles.css">
   <title>Research Articles - Home</title>
 </head>
-<hr>
 
-<body bgcolor="#caddde">
-  <header>
-    <h1> Research Articles</h1>
-    <p class="last-updated"> Last updated: September 28, 2025</p>
-    <nav aria-label="Main navigation">
-      <ul>
-        <li><a href="history.html">Article 1 - History of the Web & Browsers</a></li>
-        <li><a href="security.html"> Article 2 - Security on the Web/Internet</a></li>
-        <li><a href="mobile-first.html">Article 3 - Mobile-First Development</a></li>
-        <li><a href="stats.html">Article 4 - Internet Stats (Middle East & Lebanon)</a></li>
-        <li><a href="CSS_History.html">Article 5 - History & Evolution of CSS</a></li>
-        <li><a href="extras.html">Q&A - On-The-Go Questions</a></li>
-        <li><a href="references.html"> References</a></li>
-        <li><a href="../welcome.html"> Back to Welcome Hub</a></li>
-      </ul>
-    </nav>
+<body>
+  <!-- General Website Header -->
+  <header class="header-glass">
+    <div class="container">
+      <div class="header-content">
+        <div class="logo">ResearchHub by J</div>
+      <nav>
+          <ul class="nav-tabs">
+            <li><a href="index.html" title="Back to Home page" class="nav-tab">Home</a></li>
+            <li><a href="references.html" title="References page" class="nav-tab">References</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
   </header>
-<hr>
-  <main>
-    <section aria-labelledby="introduction">
-      <h2 id="introduction">Site Overview</h2>
-      <p> Welcome, this site contains research articles, answers to on-the-go questions, and a references page. Each article includes figures and citations. This site is an educational project for the GIN446 - Web Programming course at the Holy Spirit University of Kaslik - School of Engineering, developed by John SAMAHA, under the supervision of Dr. Pascal DAMIEN.</p>
-    </section>
-<hr>
-    <section aria-labelledby="how-to-use">
-      <h2 id="how-to-use"> How to Use</h2>
-      <ol>
-        <li>Open an article link from above to read it.</li>
-        <li>Use the References page for full citation details.</li>
-      </ol>
-    </section>
-<hr>
-    <section aria-labelledby="about">
-      <h2 id="about"> About this Project</h2>
-      <p> This project demonstrates semantic HTML practices, accessibility, and consistent referencing in IEEE style. It combines research writing with web presentation, making articles easier to navigate and explore. </p>   
-    </section>
+ 
+  <main class="main-content">
+    <div class="container">
+      <!-- Hero Section -->
+      <section class="hero-section">
+        <h1 class="hero-title">Research Articles</h1>
+        <p class="hero-subtitle">Exploring the digital landscape through comprehensive research and analysis</p>
+        <p>Last updated: October 14, 2025</p>
+      </section>
+    
+      <!-- Site Overview -->
+      <section class="card">
+        <h2>Site Overview</h2>
+      <p>Welcome to ResearchHub,your destination for technology research. This platform contains comprehensive research articles covering various aspects of web development, internet security, and digital trends, as well as answers to on-the-go questions, and a references page.</p>
+      <p>This site represents an educational project for the GIN446 - Web Programming course at the Holy Spirit University of Kaslik - School of Engineering, developed by John SAMAHA, under the supervision of Dr. Pascal DAMIEN.</p>
+
+      <div class="feature-grid">
+          <div class="feature-card">
+            <div class="feature-icon">📚</div>
+            <h3>Comprehensive Research</h3>
+            <p>Detailed articles with proper academic citations and references (IEEE Style)</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🎨</div>
+            <h3>Modern Design</h3>
+            <p>Beautiful, responsive interface with CSS techniques</p>
+          </div>
+        </div>
+      </section>
+   
+      <!-- How to Use -->
+      <section class="card">
+        <h2>How to Navigate</h2>
+        <div class="stats-grid">
+          <div class="stat-card">
+            <span class="stat-number">01</span>
+            <span class="stat-label">Select Article</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">02</span>
+            <span class="stat-label">Read Content</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">03</span>
+            <span class="stat-label">Check References</span>
+          </div>
+        </div>
+        
+        <ol>
+          <li><strong>Choose an article</strong> from the navigation menu to begin your exploration</li>
+          <li><strong>Read through the content</strong> which is also accessible to screen readers</li>
+          <li><strong>Utilize the References page</strong> for complete citation details</li>
+        </ol>
+      </section>
+  
+
+       <!-- About Project -->
+      <section class="card">
+        <h2>About this Project</h2>
+        <p>This project demonstrates web development practices including semantic HTML structure, CSS techniques, accessibility considerations, and consistent academic referencing in IEEE style.</p>
+        <p>This platform combines research writing with web presentation, making articles accessible,and easier to navigate and explore. </p>
+<div style="text-align: center;">
+        <a href="history.html" class="btn btn-primary">Start Reading Articles</a>
+        <a href="../welcome.html" class="btn btn-outline">Compare Project Versions</a>
+</div>
+</section>
+    
   </main>
-<hr>
+
+   <!-- Back to Top -->
+  <a href="#" class="back-to-top visible" id="backToTop">↑</a>
+
+  <!-- General Website Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>ResearchHub by J</h3>
+          <p>Research and website development.</p>
+        </div>
+
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="extras.html">On-The-Go Questions</a></li>
+            <li><a href="../no-css/index.html">HTML-Only Version</a></li>
+            <li><a href="../welcome.html">Welcome Hub</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h3>Connect</h3>
+          <ul class="footer-links">
+            <li>
+              <a href="https://www.linkedin.com/in/john-samaha/" target="_blank" rel="noopener">
+                <img src="../assets/LinkedIn_icon.png.png" alt="LinkedIn profile of John SAMAHA" width="16" height="16" />
+                LinkedIn
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>John SAMAHA - 2025 | GIN446 Web Programming Project</p>
+        <p>
+          <strong>AI-use disclosure:</strong> Portions of this site were generated/authored with assistance from an AI (Chat GPT-5 Thinking mini). AI content was reviewed, edited, and checked to ensure accuracy.
+        </p>
+      </div>
+    </div>
+  </footer>
 </body>
-
-<footer>
-    <p>John SAMAHA - 2025</p>
-    <p>
-      <a href="https://www.linkedin.com/in/john-samaha/" target="_blank" rel="noopener" title="Visit John SAMAHA LinkedIn profile">
-        <img src="../assets/LinkedIn_icon.png.png" alt="LinkedIn profile of John SAMAHA" width="16" height="16">
-      @john-samaha
-    </a>
-    </p>
-    <p><strong> AI-use disclosure:</strong> Portions of this site were generated/authored with assistance from an AI (Chat GPT-5 Thinking mini). AI content was reviewed, edited and checked to ensure accuracy.</p>
-</footer>
-
+</html>
