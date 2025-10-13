@@ -5,44 +5,208 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Welcome hub linking to HTML-only and CSS-styled versions" />
   <meta name="author" content="John SAMAHA" />
-   <link rel="icon" href="assets/favicon.png" type="image/png">
+  <link rel="icon" href="assets/favicon.png" type="image/png">
+  <link rel="stylesheet" href="css/styles.css">
   <title>Welcome Hub - Research Project</title>
 </head>
-<hr>
 
-<body bgcolor="#caddde">
-  <header>
-    <h1>Welcome to My Research Project</h1>
-    <p class="last-updated">Last updated: October 5, 2025</p>
+<body>
+  <!-- General Website Header -->
+  <header class="header-glass">
+    <div class="container">
+      <div class="header-content">
+        <div class="logo">ResearchHub by J</div>
+        <nav>
+          <ul class="nav-tabs">
+            <li><a href="index.html" title="Back to Home page" class="nav-tab">Home</a></li>
+            <li><a href="references.html" title="References page" class="nav-tab">References</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
   </header>
 
-  <main>
-    <section>
-      <h2>Project Versions</h2>
+  <main class="main-content">
+    <div class="container">
+      <!-- Hero Section -->
+      <section class="hero-section">
+        <h1 class="hero-title">Welcome to My Research Project</h1>
+        <p class="hero-subtitle">A timeline of project development from initial HTML structure to styled implementation</p>
+      </section>
+
+      <!-- Project Timeline -->
+      <section class="card">
+        <h2>Project Timeline</h2>
+        <p class="article-meta" style="color: grey;">Last updated: October 13, 2025</p>
+        
+        <div class="timeline">
+          <!-- Project 1 -->
+          <div class="timeline-item">
+            <div class="timeline-marker">
+              <div class="timeline-date">September 21, 2025</div>
+              <div class="timeline-dot completed"></div>
+            </div>
+            <div class="timeline-content">
+              <div class="project-header">
+                <h3>HTML-Only Version</h3>
+                <div class="status-badge completed">Completed</div>
+              </div>
+              <p>Original project with semantic HTML structure and no CSS styling. Focused on accessibility and proper document structure.</p>
+              
+              <div class="tech-tags">
+                <span class="tech-tag">HTML5</span>
+                <span class="tech-tag">Accessibility</span>
+              </div>
+              
+              <div class="project-links">
+                <a href="no-css/index.html" class="btn btn-primary">View HTML-Only Version</a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Project 2 -->
+          <div class="timeline-item">
+            <div class="timeline-marker">
+              <div class="timeline-date">October 16, 2025</div>
+              <div class="timeline-dot completed"></div>
+            </div>
+            <div class="timeline-content">
+              <div class="project-header">
+                <h3>CSS-Styled Version</h3>
+                <div class="status-badge inprogress">In Progress</div>
+              </div>
+              <p>Enhanced version with CSS styling, responsive design, and updated content. Modern design system with glassmorphism effects.</p>
+              
+              <div class="tech-tags">
+                <span class="tech-tag">CSS3</span>
+                <span class="tech-tag">Responsive Design</span>
+                <span class="tech-tag">Modern UI</span>
+              </div>
+              
+              <div class="project-links">
+                <a href="css/index.html" class="btn btn-primary">View CSS-Styled Version</a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Future Project -->
+          <div class="timeline-item">
+            <div class="timeline-marker">
+              <div class="timeline-date">Coming Soon</div>
+              <div class="timeline-dot planned"></div>
+            </div>
+            <div class="timeline-content">
+              <div class="project-header">
+                <h3>JavaScript Enhanced Version</h3>
+                <div class="status-badge planned">Planned 🔒</div>
+              </div>
+              <p>Future iteration with interactive features, dynamic content loading, and enhanced user experience through JavaScript.</p>
+              
+              <div class="tech-tags">
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">Interactive UI</span>
+                <span class="tech-tag">Dynamic Content</span>
+              </div>
+              
+              <div class="project-links">
+                <a href="#" class="btn btn-outline" aria-disabled="true">Coming Soon</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       
-      <article>
-        <h3>Project 1 — HTML-Only Version</h3>
-        <p>Original project with semantic HTML structure and no CSS styling.</p>
-        <a href="no-css/index.html">View HTML-Only Version</a>
-      </article>
-
-      <article>
-        <h3>Project 2 — CSS-Styled Version</h3>
-        <p>Enhanced version with CSS styling, responsive design, and updated content.</p>
-        <a href="css/index.html">View CSS-Styled Version</a>
-      </article>
-    </section>
+      <!-- Project Stats -->
+      <section class="card">
+        <h2>Project Statistics</h2>
+        <div class="stats-grid">
+          <div class="stat-card">
+            <span class="stat-number">2</span>
+            <span class="stat-label">Completed Projects</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">2</span>
+            <span class="stat-label">Web Development Languages Used</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">25</span>
+            <span class="stat-label">Days of Development</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">50+</span>
+            <span class="stat-label">References</span>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Project Features -->
+      <section class="card">
+        <h2>Key Features</h2>
+        <div class="feature-grid">
+          <div class="feature-card">
+            <div class="feature-icon">📄</div>
+            <h4>Semantic HTML</h4>
+            <p>Proper document structure with accessibility in mind</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🎨</div>
+            <h4>Modern Design</h4>
+            <p>Clean, responsive design with glassmorphism effects</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🦻</div>
+            <h4>Accessibility</h4>
+            <p>Accessible to screen readers and includes Alt text </p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🔍</div>
+            <h4>Research Focus</h4>
+            <p>Content focused on web history, security, and CSS evolution for educational purposes</p>
+          </div>
+        </div>
+      </section>
+    </div>
   </main>
-</body>
-<hr>
 
-<footer>
-    <p>John SAMAHA - 2025</p>
-    <p>
-      <a href="https://www.linkedin.com/in/john-samaha/" target="_blank" rel="noopener" title="Visit John SAMAHA LinkedIn profile">
-        <img src="assets/LinkedIn_icon.png.png" alt="LinkedIn profile of John SAMAHA" width="16" height="16">
-      @john-samaha
-    </a>
-    </p>
-    <p><strong> AI-use disclosure:</strong> Portions of this site were generated/authored with assistance from an AI (Chat GPT-5 Thinking mini). AI content was reviewed, edited and checked to ensure accuracy.</p>
-</footer>
+  <!-- Back to Top -->
+  <a href="#" class="back-to-top visible" id="backToTop">↑</a>
+
+  <!-- General Website Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>ResearchHub by J</h3>
+          <p>Research and website development.</p>
+        </div>
+
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="extras.html">On-The-Go Questions</a></li>
+            <li><a href="../welcome.html">Welcome Hub</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h3>Connect</h3>
+          <ul class="footer-links">
+            <li>
+              <a href="https://www.linkedin.com/in/john-samaha/" target="_blank" rel="noopener">
+                <img src="assets/LinkedIn_icon.png.png" alt="LinkedIn profile of John SAMAHA" width="16" height="16" />
+                LinkedIn
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>John SAMAHA - 2025 | GIN446 Web Programming Project</p>
+        <p>
+          <strong>AI-use disclosure:</strong> Portions of this site were generated/authored with assistance from an AI (Chat GPT-5 Thinking mini). AI content was reviewed, edited, and checked to ensure accuracy.
+        </p>
+      </div>
+    </div>
+  </footer>
