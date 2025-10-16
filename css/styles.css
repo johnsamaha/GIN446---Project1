@@ -503,7 +503,7 @@ figcaption {
   background: var(--primary-500);
   color: white;
   padding: var(--space-4);
-  text-align: left;
+  text-align: Center;
   font-weight: 600;
 }
 
