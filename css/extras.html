@@ -80,6 +80,53 @@
               </ul>
             </details>
           </section>
+
+          <!-- Q&A Section 3 -->
+          <section class="card article-section" id="Q&A3">
+            <details>
+              <summary><strong>Can URLs include non-Latin characters?</strong></summary>
+              <br>
+              <p>Modern URLs can include non-Latin characters in certain parts, thanks to two key standards: Internationalized Domain Names (IDNs) for the domain part, and Internationalized Resource Identifiers (IRIs) for path/query parts. Under the hood they are converted into an ASCII-compatible form so that legacy Internet infrastructure still works <a href=" https://www.w3.org/International/articles/idn-and-iri/" target="_blank" rel="noopener" title="Read [R3.1] on W3.org" class="reference-link">[R3.1]</a>, <a href=" https://en.wikipedia.org/wiki/Internationalized_Resource_Identifier " target="_blank" rel="noopener" title="Read [R3.2] on wikipedia" class="reference-link">[R3.2]</a>.</p>
+              <p>Originally the Domain Name System (DNS) only allowed host names to use the ASCII subset (Latin letters A-Z, digits, hyphen) because of early networking protocol constraints. Non-Latin alphabets (e.g., Arabic, Cyrillic, Chinese) were not supported. This posed a barrier for non-Latin-script users worldwide <a href=" https://www.w3.org/International/articles/idn-and-iri/" target="_blank" rel="noopener" title="Read [R3.1] on W3.org" class="reference-link">[R3.1]</a>.</p>
+              <p>To address this, the Internet Engineering Task Force (IETF) developed the IDNA (Internationalized Domain Names in Applications) standard. With it, domain labels containing Unicode characters are first processed (normalization, mapping) and then encoded via an ASCII-compatible encoding system called Punycode, prefixed by <code>xn--</code> so that DNS can handle them <a href=" https://www.ionos.com/digitalguide/domains/domain-administration/punycode " target="_blank" rel="noopener" title="Read [R3.3] on Ionos" class="reference-link">[R3.3]</a>, <a href=" https://chromium.googlesource.com/chromium/src/+/main/docs/idn.md" target="_blank" rel="noopener" title="Read [R3.4] on Chromium Project" class="reference-link">[R3.4]</a>. For example, the domain <code>münchen.de</code> becomes <code>xn--mnchen-3ya.de</code> behind the scenes <a href=" https://www.ionos.com/digitalguide/domains/domain-administration/punycode " target="_blank" rel="noopener" title="Read [R3.3] on Ionos" class="reference-link">[R3.3]</a>.</p>
+              <p>On the resource side (paths, query strings) the IRI standard extends the Uniform Resource Identifier (URI) by allowing Unicode characters. When a browser sends a request on the wire, these Unicode parts are typically UTF-8 encoded and then percent-escaped, so they comply with the ASCII-based URI syntax <a href=" https://en.wikipedia.org/wiki/Internationalized_Resource_Identifier " target="_blank" rel="noopener" title="Read [R3.2] on wikipedia" class="reference-link">[R3.2]</a>.</p>
+              <p>When you enter a URL containing non-Latin characters, the user agent (browser) usually converts each domain label into its Punycode ASCII representation, then submits that to the DNS. The display in the address bar might still show the original script (depending on browser policy and security concerns) or fall back to the Punycode form if the domain is considered risky <a href=" https://chromium.googlesource.com/chromium/src/+/main/docs/idn.md" target="_blank" rel="noopener" title="Read [R3.4] on Chromium Project" class="reference-link">[R3.4]</a>.</p>
+              <p>One important point: Not all uses of non-Latin characters are permitted. Registries often restrict scripts or character sets to avoid confusion (homograph attacks) where characters from different scripts look visually identical (for example Cyrillic “а” vs Latin “a”) <a href=" https://en.wikipedia.org/wiki/Punycode" target="_blank" rel="noopener" title="Read [R3.5] on wikipedia" class="reference-link">[R3.5]</a>.</p>              
+            </details>
+          </section>
+
+           <!-- Q&A Section 4 -->
+          <section class="card article-section" id="Q&A4">
+            <details>
+              <summary><strong>Does JavaScript Support Pre and Post Incrementation?</strong></summary>
+              <br>
+              <p>JavaScript supports both pre-incrementation (<code>++x</code>) and post-incrementation (<code>x++</code>) operators. Both increase a variable’s value by one, but they differ in when the increment happens relative to the expression’s evaluation <a href=" https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Increment" target="_blank" rel="noopener" title="Read [R4.1] on Web Docs Mozilla" class="reference-link">[R4.1]</a>.</p>
+              <p>Explanation <a href=" https://www.w3schools.com/js/js_operators.asp " target="_blank" rel="noopener" title="Read [R4.2] on W3Schools" class="reference-link">[R4.2]</a>:</p>
+                <p>The increment operator (++) is one of JavaScript’s unary operators, meaning it acts on a single operand. 
+                  <ul>
+                      <li>Pre-increment (<code>++x</code>): The variable <code>x</code> is incremented first, and the new value is immediately returned by the expression.</li>
+                      <li>Post-increment (<code>x++</code>): The current value of <code>x</code> is returned first, and the increment happens after the expression is evaluated.</li>
+                  </ul>
+                </p>
+                <p>Examples:</p>
+                <p><pre>
+let x = 5;
+console.log(++x); // Output: 6 (pre-increment: value increased before use)
+console.log(x++); // Output: 6 (post-increment: value increased after use)
+console.log(x);   // Output: 7
+</pre>
+</p>
+<p>In the above example:</p>
+<p>
+  <ul>
+    <li>The first <code>console.log(++x)</code> increments <code>x</code> to 6 before printing.</li>
+    <li>The second <code>console.log(x++)</code> prints 6 but increments afterward, making <code>x=7</code> by the end.</li>
+  </ul>
+</p>
+<p>This distinction becomes important in loops and complex expressions. Using pre-increment can be slightly more predictable when you want to use the incremented value immediately, while post-increment is common in counters or <code>for</code> loops (e.g., <code>for (let i = 0; i < 5; i++)</code>) <a href=" https://javascript.info/operators#increment-decrement  " target="_blank" rel="noopener" title="Read [R4.3] on JavaScript Info" class="reference-link">[R4.3]</a>.</p>
+<p>JavaScript also supports pre- and post-decrement (<code>--x</code> and <code>x--</code>) with similar rules — they decrease a variable’s value by one before or after evaluation respectively <a href=" https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Increment" target="_blank" rel="noopener" title="Read [R4.1] on Web Docs Mozilla" class="reference-link">[R4.1]</a>.</p>
+</details>
+          </section>
         </div>
 
         <!-- Article Footer -->
