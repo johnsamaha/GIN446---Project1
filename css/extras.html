@@ -95,13 +95,35 @@
             </details>
           </section>
 
-           <!-- Q&A Section 4 -->
+<!-- Q&A Section 4 -->
           <section class="card article-section" id="Q&A4">
+            <details>
+              <summary><strong>JavaScript History</strong></summary>
+              <br>
+              <p>JavaScript was created in 1995 by Brendan Eich at Netscape Communications. Originally developed in just 10 days, it was designed to make web pages more interactive and dynamic. Over the years, it evolved from a simple browser scripting tool into one of the most important and widely used programming languages on the web <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noopener" title="Read [R4.1] on MDN Web Docs Mozilla" class="reference-link">[R4.1]</a>.</p>
+              <p>Explanation & Evolution</p>
+              <p>In the mid-1990s, the early web was largely static — HTML could only define structure, and CSS was still in its infancy. Netscape wanted a lightweight scripting language to add interactivity to its browser, Netscape Navigator. Brendan Eich created the first version, initially called Mocha, which was later renamed LiveScript, and finally JavaScript for marketing reasons — to associate it with the popularity of Java at the time <a href="https://brendaneich.com/2010/07/a-brief-history-of-javascript/" target="_blank" rel="noopener" title="Read [R4.2] on Brendan Eich’s Blog" class="reference-link">[R4.2]</a>.</p>
+              <p>In 1996, Microsoft implemented a similar version of JavaScript in Internet Explorer, calling it JScript, which led to compatibility issues between browsers. To standardize the language, Netscape submitted JavaScript to ECMA International, resulting in the ECMAScript standard (ECMA-262) released in 1997. ECMAScript remains the official name for the language specification, while “JavaScript” is its popular implementation <a href="https://ecma-international.org/publications-and-standards/standards/ecma-262/" target="_blank" rel="noopener" title="Read [R4.3] on ECMA International" class="reference-link">[R4.3]</a>.</p>
+              <p>Subsequent versions improved syntax, performance, and developer tools:
+                <ul>
+                  <li>ES3 (1999) standardized core features used across browsers.</li>
+                  <li>ES5 (2009) added JSON support and strict mode.</li>
+                  <li>ES6 / ES2015 (2015) was a major update introducing let, const, classes, modules, and arrow functions.li>
+                  <li>Later editions continue to evolve annually, adding features such as async/await, optional chaining, and new data structures <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference" target="_blank" rel="noopener" title="Read [R4.4] on MDN Web Docs Mozilla" class="reference-link">[R4.4]</a>.</li>
+                </ul>
+              </p>
+              <p>Today, JavaScript powers not only web browsers but also servers (Node.js), desktop apps (Electron), and mobile apps (React Native). It remains one of the most influential and versatile languages in modern computing.</p>
+              
+            </details>
+          </section>
+
+           <!-- Q&A Section 5 -->
+          <section class="card article-section" id="Q&A5">
             <details>
               <summary><strong>Does JavaScript Support Pre and Post Incrementation?</strong></summary>
               <br>
-              <p>JavaScript supports both pre-incrementation (<code>++x</code>) and post-incrementation (<code>x++</code>) operators. Both increase a variable’s value by one, but they differ in when the increment happens relative to the expression’s evaluation <a href=" https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Increment" target="_blank" rel="noopener" title="Read [R4.1] on Web Docs Mozilla" class="reference-link">[R4.1]</a>.</p>
-              <p>Explanation <a href=" https://www.w3schools.com/js/js_operators.asp " target="_blank" rel="noopener" title="Read [R4.2] on W3Schools" class="reference-link">[R4.2]</a>:</p>
+              <p>JavaScript supports both pre-incrementation (<code>++x</code>) and post-incrementation (<code>x++</code>) operators. Both increase a variable’s value by one, but they differ in when the increment happens relative to the expression’s evaluation <a href=" https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Increment" target="_blank" rel="noopener" title="Read [R5.1] on Web Docs Mozilla" class="reference-link">[R5.1]</a>.</p>
+              <p>Explanation <a href=" https://www.w3schools.com/js/js_operators.asp " target="_blank" rel="noopener" title="Read [R5.2] on W3Schools" class="reference-link">[R5.2]</a>:</p>
                 <p>The increment operator (++) is one of JavaScript’s unary operators, meaning it acts on a single operand. 
                   <ul>
                       <li>Pre-increment (<code>++x</code>): The variable <code>x</code> is incremented first, and the new value is immediately returned by the expression.</li>
@@ -123,8 +145,8 @@ console.log(x);   // Output: 7
     <li>The second <code>console.log(x++)</code> prints 6 but increments afterward, making <code>x=7</code> by the end.</li>
   </ul>
 </p>
-<p>This distinction becomes important in loops and complex expressions. Using pre-increment can be slightly more predictable when you want to use the incremented value immediately, while post-increment is common in counters or <code>for</code> loops (e.g., <code>for (let i = 0; i < 5; i++)</code>) <a href=" https://javascript.info/operators#increment-decrement  " target="_blank" rel="noopener" title="Read [R4.3] on JavaScript Info" class="reference-link">[R4.3]</a>.</p>
-<p>JavaScript also supports pre- and post-decrement (<code>--x</code> and <code>x--</code>) with similar rules — they decrease a variable’s value by one before or after evaluation respectively <a href=" https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Increment" target="_blank" rel="noopener" title="Read [R4.1] on Web Docs Mozilla" class="reference-link">[R4.1]</a>.</p>
+<p>This distinction becomes important in loops and complex expressions. Using pre-increment can be slightly more predictable when you want to use the incremented value immediately, while post-increment is common in counters or <code>for</code> loops (e.g., <code>for (let i = 0; i < 5; i++)</code>) <a href=" https://javascript.info/operators#increment-decrement  " target="_blank" rel="noopener" title="Read [R5.3] on JavaScript Info" class="reference-link">[R5.3]</a>.</p>
+<p>JavaScript also supports pre- and post-decrement (<code>--x</code> and <code>x--</code>) with similar rules — they decrease a variable’s value by one before or after evaluation respectively <a href=" https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Increment" target="_blank" rel="noopener" title="Read [R5.1] on Web Docs Mozilla" class="reference-link">[R5.1]</a>.</p>
 </details>
           </section>
         </div>
