@@ -6,13 +6,15 @@
   --container-bg: #f9f9f9;
 }
 
-game_body {
+.game_body {
   margin: 0;
   padding-top: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
   font-family: Arial, sans-serif;
+  position: relative;
+  overflow: auto;
 }
 
 h1 {
@@ -148,8 +150,12 @@ h1 {
 
 /* Popup Overlay */
 #popup-overlay {
-  position: fixed;
+  position: absolute;
   inset: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   background: rgba(0, 0, 0, 0.5);
   display: flex;
   align-items: center;
@@ -157,7 +163,7 @@ h1 {
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.25s ease;
-  z-index: 10000;
+  z-index: 10;
 }
 
 /* Visible state */
