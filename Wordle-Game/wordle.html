@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Wordle Clone Game implementation based on the New York Times' Wordle Game" />
+  <meta name="authors" content="John SAMAHA, Gio ACHKAR, Kevin SKAYEM, Charbel SALLOUM" />
+  <link rel="icon" href="../assets/favicon.png" type="image/png" />
+  <title>Game | Wordle Clone</title>
+  <link rel="stylesheet" href="../css/styles.css" />
+   <link rel="stylesheet" href="wordle_styles.css" />
+  <script type="module" src="script.js"></script>
+</head>
+
+  <body>
+ <!-- General Website Header -->
+  <!-- General Website Header -->
+  <header class="header-glass">
+    <div class="container">
+      <div class="header-content">
+        <div class="logo">ResearchHub by J</div>
+        <nav>
+          <ul class="nav-tabs">
+            <li><a href="../css/index.html" title="Back to Home page" class="nav-tab">Home</a></li>
+            <li class="dropdown">
+                  <a href="#" class="nav-tab" title="Choose an article">Articles</a>
+                   <ul class="dropdown-menu">
+                        <a href="../css/history.html" class="dropdown-item">Web History</a>
+                        <a href="../css/security.html" class="dropdown-item">Security</a>
+                        <a href="../css/mobile-first.html" class="dropdown-item">Mobile First</a>
+                        <a href="../css/stats.html" class="dropdown-item">Internet Stats</a>
+                        <a href="../css/CSS_History.html" class="dropdown-item">CSS Evolution</a>
+                        <a href="../ar/arabic-article.html"class="dropdown-item">التكنولوجيا التربوية والتفريق كوسائل لتعزيز المهارات في القرن الواحد والعشرين</a>
+                   </ul>  
+              </li>
+              <li><a href="../css/extras.html" title="Q&A Questions on-the-go" class="nav-tab">On-The-Go Questions</a></li>
+              <li><a href="../Wordle-Game/wordle.html" title="Wordle Clone" class="nav-tab active">Wordle</a></li>
+            <li><a href="../css/references.html" title="References page" class="nav-tab">References</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+<main class="main-content">
+    <article>
+      <div class="container">
+
+        <!-- game Header -->
+        <section class="article-header">
+          <h1 class="article-title">Wordle Clone</h1>
+          <p class="article-meta">Inspired by the New York Times' Wordle Game | Last updated: October 26, 2025</p>
+        </section>
+
+<section class="card article-section" aria-labelledby="title">
+            <h3 id="title">Wordle Clone</h3>
+          
+
+<game_body>
+
+    <div id="game-board"></div>
+
+    <div id="keyboard-container"></div>
+
+    <div id="toast" aria-live="polite" role="status"></div>
+
+    <!-- Game End Popup -->
+    <div id="popup-overlay">
+      <div id="popup-box">
+        <h2 id="popup-title">Game Over!</h2>
+        <p id="popup-score">Your score: 0 / 60</p>
+        <p id="popup-guesses">Guesses used: 0</p>
+        <button id="popup-btn">Play Again</button>
+      </div>
+    </div>
+
+</game_body>
+</section>
+</main>
+  <!-- General Website Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>ResearchHub by J</h3>
+          <p>Research and website development.</p>
+        </div>
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="../css/index.html">Home</a></li>
+            <li><a href="../css/extras.html">On-The-Go Questions</a></li>
+            <li><a href="../welcome.html">Welcome Hub</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Connect</h3>
+          <ul class="footer-links">
+            <li><a href="https://www.linkedin.com/in/john-samaha/" target="_blank" rel="noopener">
+              <img src="../assets/LinkedIn_icon.png.png" alt="LinkedIn profile of John SAMAHA" width="16" height="16"> LinkedIn
+            </a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>John SAMAHA - 2025 | GIN446 Web Programming Project</p>
+        <p><strong>AI-use disclosure:</strong> Portions of this site were generated/authored with assistance from an AI (Chat GPT-5 Thinking mini). AI content was reviewed, edited, and checked to ensure accuracy.</p>
+      </div>
+    </div>
+  </footer>
+  </body>
+</html>
