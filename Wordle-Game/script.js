@@ -375,7 +375,8 @@ document.addEventListener("DOMContentLoaded", function () {
       }
 
       // Add click listener for functionality
-      keyElement.addEventListener("click", () => {
+      keyElement.addEventListener("click", (event) => {
+        event.target.blur(); // removes focus from the clicked button
         if (gameOver) return;
 
         if (key === "Enter") {
