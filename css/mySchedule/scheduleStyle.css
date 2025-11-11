@@ -540,3 +540,27 @@ body:has(.popup:target) {
 .popup:target .card-body {
   scroll-behavior: auto; /* Disable smooth scroll for initial load */
 }
+
+
+@media print {
+  @page {
+    size: A2 portrait;
+    margin: 0;
+    padding: 0;
+    width: 320mm;
+    height: 520mm;
+  }
+
+  .btn-primary {
+    display: none;
+  }
+
+  a {
+    text-decoration: none;
+  }
+   * {
+    page-break-before: avoid;
+    page-break-after: avoid;
+    page-break-inside: avoid;
+  }
+}
