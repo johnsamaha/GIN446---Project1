@@ -13,7 +13,7 @@
 
 #gameBoard {
   width: 500px;
-  height: 320px;
+  height: 290px;
   margin: 20px auto;
   display: flex;
   flex-wrap: wrap;
@@ -42,4 +42,28 @@ div.buttonDivision{
 display: flex;
 justify-content: center;
 gap: 12px;
+}
+
+
+
+.cell.X {
+  background-color: rgb(112, 205, 228);   /* Blue for X */
+}
+
+.cell.O {
+  background-color: rgb(61, 134, 208);   /* Red for O */
+}
+
+.scoreBoard{
+  width: auto; 
+  height: 30px;
+  font-size: var(--text-lg);
+  background-color: rgb(34, 163, 232);
+  margin: auto;
+  margin-bottom: 20px;
+  color: var(--neutral-50);
+    border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  display: flex;
+  justify-content: space-around; /* space between X and O */ 
 }

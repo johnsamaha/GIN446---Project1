@@ -1,3 +1,9 @@
+var scoreX = 0;
+var scoreO = 0;
+
+var scoreXText = document.getElementById("scoreX");
+var scoreOText = document.getElementById("scoreO");
+
 var cells = document.querySelectorAll(".cell");
 var statusText = document.getElementById("statusText");
 var restartButton = document.getElementById("restartBtn");
@@ -47,6 +53,7 @@ function playSound(sound) {
 
       if (clickedCell.textContent === "" && gameActive === true) {
         clickedCell.textContent = currentPlayer;
+        clickedCell.classList.add(currentPlayer); // Add color class
 
         checkWinner();
 
@@ -68,6 +75,7 @@ function playSound(sound) {
   restartButton.addEventListener("click", function() {
     for (var i = 0; i < cells.length; i++) {
       cells[i].textContent = "";
+      cells[i].classList.remove("X", "O"); // Remove colors
     }
 
     currentPlayer = "X";
@@ -88,6 +96,15 @@ function playSound(sound) {
       if (cellA !== "" && cellA === cellB && cellB === cellC) {
         statusText.textContent = cellA + " wins!";
         gameActive = false;
+
+        if (cellA === "X") {
+    scoreX++;
+    scoreXText.textContent = scoreX;
+  } else {
+    scoreO++;
+    scoreOText.textContent = scoreO;
+  }
+
         playSound(soundWin);
         return;
       }
