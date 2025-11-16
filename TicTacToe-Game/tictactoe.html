@@ -3,14 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Wordle Clone Game implementation based on the New York Times' Wordle Game" />
-  <meta name="authors" content="John SAMAHA, Gio ACHKAR, Kevin SKAYEM, Charbel SALLOUM" />
+  <meta name="description" content="Tic Tac Toe Game implementation" />
+  <meta name="author" content="John SAMAHA" />
   <link rel="icon" href="../assets/favicon.png" type="image/png" />
-  <title>Game | Wordle Clone</title>
-  <link rel="stylesheet" href="../css/styles.css" />
-   <link rel="stylesheet" href="wordle_styles.css" />
-  <script type="module" src="script.js"></script>
+  <title>Game | Tic Tac Toe</title>
+ <link rel="stylesheet" href="../css/styles.css" />
+   <link rel="stylesheet" href="tictactoe_styles.css" />
+  <script type="module" src="tictactoe.js"></script>
 </head>
+
 
   <body>
  <!-- General Website Header -->
@@ -37,8 +38,8 @@
               <li><a href="../css/mySchedule/mySchedule.html" title="mySchedule" class="nav-tab">Schedule</a></li>
               <li><a href="../css/CV/cv.html" title="myCV" class="nav-tab">CV</a></li>
               <li><a href="../css/CV/cv-entry.html" title="CVBuilder" class="nav-tab">CV Builder</a></li>
-              <li><a href="../TicTacToe-Game/tictactoe.html" title="TicTacToe Game" class="nav-tab">TicTacToe</a></li>
-              <li><a href="../Wordle-Game/wordle.html" title="Wordle Clone" class="nav-tab active">Wordle</a></li>
+            <li><a href="../TicTacToe-Game/tictactoe.html" title="TicTacToe Game" class="nav-tab active">TicTacToe</a></li>
+              <li><a href="../Wordle-Game/wordle.html" title="Wordle Clone" class="nav-tab">Wordle</a></li>
             <li><a href="../css/references.html" title="References page" class="nav-tab">References</a></li>
           </ul>
         </nav>
@@ -46,42 +47,47 @@
     </div>
   </header>
 
+</head>
+<body>
 <main class="main-content">
     <article>
       <div class="container">
 
         <!-- game Header -->
         <section class="article-header">
-          <h1 class="article-title">Wordle Clone</h1>
-          <p class="article-meta">Inspired by the New York Times' Wordle Game | Last updated: October 26, 2025</p>
+          <h1 class="article-title">Tic Tac Toe</h1>
+          <p class="article-meta">Last updated: November 16, 2025</p>
         </section>
 
 <section class="card article-section" aria-labelledby="title">
-            <h3 id="title">Wordle Clone</h3>
-<div class="game_body">
+            <h3 id="title">Tic Tac Toe</h3>
 
-    <div id="game-board"></div>
 
-    <div id="keyboard-container"></div>
+  <div id="gameBoard">
+    <div class="cell" data-index="0"></div>
+    <div class="cell" data-index="1"></div>
+    <div class="cell" data-index="2"></div>
+    <div class="cell" data-index="3"></div>
+    <div class="cell" data-index="4"></div>
+    <div class="cell" data-index="5"></div>
+    <div class="cell" data-index="6"></div>
+    <div class="cell" data-index="7"></div>
+    <div class="cell" data-index="8"></div>
+  </div><br><br><br><br><br><br>
+  <p id="statusText" class="statusText">X's turn</p><br>
+  
 
-    <div id="toast" aria-live="polite" role="status"></div>
+  
 
-    <!-- Game End Popup -->
-    <div id="popup-overlay">
-      <div id="popup-box">
-        <h2 id="popup-title">Game Over!</h2>
-        <p id="popup-score">Your score: 0 / 60</p>
-        <p id="popup-guesses">Guesses used: 0</p>
-        <button id="popup-btn">Play Again</button>
-      </div>
-    </div>
+   <div class="buttonDivision">
+    <button id="restartBtn" class="btn-primary btn">Restart</button>
+<button id="muteToggle" class="btn">🔇 Mute Sounds</button>   
+</div> 
 
-  </div>
 </section>
 </main>
 
-
-  <!-- General Website Footer -->
+    <!-- General Website Footer -->
   <footer class="site-footer">
     <div class="container">
       <div class="footer-content">
@@ -112,5 +118,12 @@
       </div>
     </div>
   </footer>
-  </body>
-</html>
+
+
+</body></html>
+
+
+<audio id="soundX" src="../assets/TicTacToe Sound Effects/whoosh0.mp3"></audio>
+<audio id="soundO" src="../assets/TicTacToe Sound Effects/whoosh1.mp3"></audio>
+<audio id="soundWin" src="../assets/TicTacToe Sound Effects/applause.mp3"></audio>
+<audio id="soundDraw" src="../assets/TicTacToe Sound Effects/mixkit-sad-game-over-trombone-471.wav"></audio>
