@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="CV Builder" />
+  <meta name="author" content="John SAMAHA" />
+  <link rel="icon" href="../../assets/favicon.png" type="image/png" />
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="CVstyle.css">
+  <link rel="stylesheet" href="CvEntryStyle.css">
+  <title>CV Builder</title>
+  <script src="cv.js" defer></script>
+</head>
+
+<body>
+    <!-- General Website Header -->
+  <header class="header-glass">
+    <div class="container">
+      <div class="header-content">
+        <div class="logo">ResearchHub by J</div>
+        <nav>
+          <ul class="nav-tabs">
+            <li><a href="../index.html" title="Back to Home page" class="nav-tab">Home</a></li>
+            <li class="dropdown">
+                  <a href="#" class="nav-tab" title="Choose an article">Articles</a>
+                   <ul class="dropdown-menu">
+                        <a href="../history.html" class="dropdown-item">Web History</a>
+                        <a href="../security.html" class="dropdown-item">Security</a>
+                        <a href="../mobile-first.html" class="dropdown-item">Mobile First</a>
+                        <a href="../stats.html" class="dropdown-item">Internet Stats</a>
+                        <a href="../CSS_History.html" class="dropdown-item">CSS Evolution</a>
+                        <a href="../../ar/arabic-article.html"class="dropdown-item">التكنولوجيا التربوية والتفريق كوسائل لتعزيز المهارات في القرن الواحد والعشرين</a>
+                   </ul>  
+              </li>
+              <li><a href="../extras.html" title="Q&A Questions on-the-go" class="nav-tab">On-The-Go Questions</a></li>
+              <li><a href="../mySchedule/mySchedule.html" title="mySchedule" class="nav-tab">Schedule</a></li>
+              <li><a href="../CV/cv.html" title="myCV" class="nav-tab">CV</a></li>
+              <li><a href="../CV/cv-entry.html" title="CVBuilder" class="nav-tab active">CV Builder</a></li>
+              <li><a href="../../Wordle-Game/wordle.html" title="Wordle Clone" class="nav-tab">Wordle</a></li>
+            <li><a href="../references.html" title="References page" class="nav-tab">References</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>  
+
+
+  <main class="main-content">
+    <article>
+      <div class="container">
+        <!-- Page header -->
+        <section class="article-header page-header">
+          <h1 class="article-title">CV Builder – Live Preview</h1>
+          <p class="article-meta">
+            Fill in your information on the left and see your CV rendered on the right in the same layout.
+          </p>
+        </section>
+
+        <div class="article-content">
+          <!-- Layout: form + preview side by side -->
+          <div class="cv-builder-layout">
+            <!-- CV Data Entry Form -->
+            <section class="card article-section cv-builder-form">
+              <h2>CV Data Entry</h2>
+              <p class="form-intro">
+                Fields marked with <span class="required-indicator">*</span> are required.  
+                The preview updates as you type. You can still run a final validation with the “Validate & Update” button.
+              </p>
+
+              <form id="cv-form" novalidate>
+                <!-- Personal Info -->
+                <fieldset class="cv-fieldset">
+                  <legend>Personal Information</legend>
+                  <div class="form-grid">
+                    <div class="form-group">
+                      <label for="fullName">Full Name <span class="required-indicator">*</span></label>
+                      <input type="text" id="fullName" name="fullName" required />
+                      <p class="field-error" data-error-for="fullName"></p>
+                    </div>
+
+                    <div class="form-group">
+                      <label for="headline">Headline / Title <span class="required-indicator">*</span></label>
+                      <input type="text" id="headline" name="headline"
+                        placeholder="e.g. MIE – Computer Engineering Student" required />
+                      <p class="field-error" data-error-for="headline"></p>
+                    </div>
+                  </div>
+
+                  <div class="form-grid">
+                    <div class="form-group">
+                      <label for="phone">Phone <span class="required-indicator">*</span></label>
+                      <input type="tel" id="phone" name="phone" placeholder="+961 ..." required />
+                      <p class="field-error" data-error-for="phone"></p>
+                    </div>
+                    <div class="form-group">
+                      <label for="emailPrimary">Primary Email <span class="required-indicator">*</span></label>
+                      <input type="email" id="emailPrimary" name="emailPrimary"
+                        placeholder="yourname@example.com" required />
+                      <p class="field-error" data-error-for="emailPrimary"></p>
+                    </div>
+                  </div>
+
+                  <div class="form-grid">
+                    <div class="form-group">
+                      <label for="emailSecondary">Academic / Secondary Email</label>
+                      <input type="email" id="emailSecondary" name="emailSecondary"
+                        placeholder="yourname@university.edu" />
+                      <p class="field-error" data-error-for="emailSecondary"></p>
+                    </div>
+                    <div class="form-group">
+                      <label for="linkedIn">LinkedIn URL</label>
+                      <input type="url" id="linkedIn" name="linkedIn"
+                        placeholder="https://www.linkedin.com/in/your-profile/" />
+                      <p class="field-error" data-error-for="linkedIn"></p>
+                    </div>
+                  </div>
+                </fieldset>
+
+                <!-- Profile Summary -->
+                <fieldset class="cv-fieldset">
+                  <legend>Profile Summary</legend>
+                  <div class="form-group">
+                    <label for="summaryTagline">
+                      Short Tagline / Quote (will be inside the blockquote)
+                    </label>
+                    <input type="text" id="summaryTagline" name="summaryTagline"
+                      placeholder="In perpetual development..." />
+                    <p class="field-error" data-error-for="summaryTagline"></p>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="summaryBody">
+                      Summary Paragraph <span class="required-indicator">*</span>
+                    </label>
+                    <textarea id="summaryBody" name="summaryBody" rows="5" required
+                      placeholder="Write a concise professional summary..."></textarea>
+                    <p class="field-error" data-error-for="summaryBody"></p>
+                  </div>
+                </fieldset>
+
+                <!-- Education (at least 1 item) -->
+                <fieldset class="cv-fieldset">
+                  <legend>Education <span class="required-indicator">*</span></legend>
+                  <p class="fieldset-help">
+                    At least one education entry is required. Fill the current one before adding another.
+                  </p>
+                  <div id="education-items"></div>
+                  <button type="button" class="btn-outline small-btn" id="add-education-btn">
+                    + Add Education
+                  </button>
+                </fieldset>
+
+                <!-- Experience (at least 1 item) -->
+                <fieldset class="cv-fieldset">
+                  <legend>Experience <span class="required-indicator">*</span></legend>
+                  <p class="fieldset-help">
+                    Add your positions, responsibilities, and activities.
+                  </p>
+                  <div id="experience-items"></div>
+                  <button type="button" class="btn-outline small-btn" id="add-experience-btn">
+                    + Add Experience
+                  </button>
+                </fieldset>
+
+                <!-- Projects (optional) -->
+                <fieldset class="cv-fieldset">
+                  <legend>Academic & Technical Projects (optional)</legend>
+                  <div id="project-items"></div>
+                  <button type="button" class="btn-outline small-btn" id="add-project-btn">
+                    + Add Project
+                  </button>
+                </fieldset>
+
+                <!-- Certifications (optional) -->
+                <fieldset class="cv-fieldset">
+                  <legend>Certifications (optional)</legend>
+                  <div id="certification-items"></div>
+                  <button type="button" class="btn-outline small-btn" id="add-certification-btn">
+                    + Add Certification
+                  </button>
+                </fieldset>
+
+                <!-- Volunteering & Leadership (optional) -->
+                <fieldset class="cv-fieldset">
+                  <legend>Volunteering & Leadership (optional)</legend>
+                  <div id="volunteering-items"></div>
+                  <button type="button" class="btn-outline small-btn" id="add-volunteering-btn">
+                    + Add Volunteering / Leadership Entry
+                  </button>
+                </fieldset>
+
+                <!-- Skills -->
+                <fieldset class="cv-fieldset">
+  <legend>Skills (optional)</legend>
+
+  <div id="skills-items"></div>
+
+  <button type="button" class="btn-outline small-btn" id="add-skill-btn">
+    + Add Skill Category
+  </button>
+</fieldset>
+
+
+                <!-- Actions -->
+                <div class="form-actions">
+                  <button type="submit" class="btn-primary btn" id="validate-update-btn">
+                    Validate &amp; Update Preview
+                  </button>
+                    <button type="button" class="btn btn-outline small-btn" id="clear-form-btn">
+    Clear all fields
+  </button>
+                  <p class="form-status-message" id="form-status-message" aria-live="polite"></p>
+                </div>
+              </form>
+            </section>
+
+            <!-- CV Preview -->
+            <section class="card article-section cv-preview-wrapper">
+              <div class="cv-preview-actions">
+                <button type="button" class="btn-primary btn" id="print-cv-btn">
+                  Print / Save as PDF
+                </button>
+                <button type="button" class="btn btn-outline" id="open-new-tab-btn">
+                  Open CV in New Tab
+                </button>
+              </div>
+
+              <!-- This is the CV layout, matching cv.html structure -->
+              <div id="cv-preview">
+                <!-- CV Header -->
+                <section class="article-header cv-preview-header">
+                  <h1 class="article-title" id="preview-name-title">
+                    Your Name – Headline
+                  </h1>
+                  <p class="article-meta">
+                    Professional CV | Last updated:
+                    <span id="preview-last-updated">not yet generated</span>
+                  </p>
+                </section>
+
+                <!-- Hero / Contact -->
+                <section class="hero-section cv-preview-hero">
+                  <p>
+                    <span id="preview-linkedin-wrapper">
+                      <a href="#" id="preview-linkedin-link" target="_blank" rel="noopener" style="display:none;">
+                        <img src="../../assets/LinkedIn_icon.png.png"
+                          alt="LinkedIn profile" width="16" height="16" />
+                        <span id="preview-linkedin-text">LinkedIn</span>
+                      </a>
+                    </span>
+                    <span id="preview-hero-separator" style="display:none;"> | </span>
+                    📞 <span id="preview-phone">+961 ...</span>
+                  </p>
+                  <p>
+                    <a href="#" id="preview-email-primary-link">
+                      📩 <span id="preview-email-primary">primary@example.com</span>
+                    </a>
+                    <span id="preview-email-secondary-wrapper" style="display:none;">
+                      &nbsp; | &nbsp;
+                      <a href="#" id="preview-email-secondary-link">
+                        🏫 <span id="preview-email-secondary">academic@example.edu</span>
+                      </a>
+                    </span>
+                  </p>
+                </section>
+
+                <!-- Profile Summary -->
+                <section class="card article-section" id="preview-summary-section">
+                  <h2>Profile Summary</h2>
+                  <blockquote>
+                    <p id="preview-summary-tagline">
+                    </p>
+                  </blockquote>
+
+                  <section aria-labelledby="introduction">
+                    <p id="preview-summary-body">
+                    </p>
+                  </section>
+                </section>
+
+                <!-- Education -->
+                <section aria-labelledby="education" class="card article-section" id="preview-education-section">
+                  <h3 id="education">Education</h3>
+                  <ul id="preview-education-list"></ul>
+                </section>
+
+                <!-- Experience -->
+                <section aria-labelledby="experience" class="card article-section" id="preview-experience-section">
+                  <h3 id="experience">Experience</h3>
+                  <ul id="preview-experience-list"></ul>
+                </section>
+
+                <!-- Projects -->
+                <section aria-labelledby="projects" class="card article-section" id="preview-projects-section">
+                  <h3 id="projects">Academic & Technical Projects</h3>
+                  <ul id="preview-projects-list"></ul>
+                </section>
+
+                <!-- Certifications -->
+                <section aria-labelledby="certifications" class="card article-section" id="preview-certifications-section">
+                  <h3 id="certifications">Certifications</h3>
+                  <ul id="preview-certifications-list"></ul>
+                </section>
+
+                <!-- Volunteering & Leadership -->
+                <section aria-labelledby="Volunteering" class="card article-section"
+                  id="preview-volunteering-section">
+                  <h3 id="Volunteering">Volunteering &amp; Leadership</h3>
+                  <ul id="preview-volunteering-list"></ul>
+                </section>
+
+                <!-- Skills -->
+                <section class="card article-section" id="preview-skills-section">
+  <h2>Skills</h2>
+  <ul id="preview-skills-list"></ul>
+</section>
+
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <!-- Back to Top -->
+  <a href="#" class="back-to-top visible" id="backToTop">↑</a>
+
+  <!-- General Website Footer (copied from cv.html) -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>ResearchHub by J</h3>
+          <p>Research and website development.</p>
+        </div>
+
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../extras.html">On-The-Go Questions</a></li>
+            <li><a href="../../welcome.html">Welcome Hub</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h3>Connect</h3>
+          <ul class="footer-links">
+            <li>
+              <a href="https://www.linkedin.com/in/john-samaha/" target="_blank" rel="noopener">
+                <img src="../../assets/LinkedIn_icon.png.png"
+                  alt="LinkedIn profile of John SAMAHA" width="16" height="16" />
+                LinkedIn
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>John SAMAHA - 2025 | GIN446 Web Programming Project</p>
+        <p>
+          <strong>AI-use disclosure:</strong> Portions of this site were generated/authored with assistance from an AI.
+          AI content was reviewed, edited, and checked to ensure accuracy.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- TEMPLATES FOR REPEATABLE SECTIONS -->
+  <template id="education-template">
+    <div class="multi-item education-item">
+      <div class="multi-item-header">
+        <h4>Education Entry</h4>
+        <button type="button" class="remove-item-btn" aria-label="Remove education entry">Remove</button>
+      </div>
+      <div class="form-grid">
+        <div class="form-group">
+          <label>Institution <span class="required-indicator">*</span></label>
+          <input type="text" class="edu-institution" data-required="true" />
+        </div>
+        <div class="form-group">
+          <label>Location</label>
+          <input type="text" class="edu-location" />
+        </div>
+      </div>
+      <div class="form-grid">
+        <div class="form-group">
+          <label>Degree / Program <span class="required-indicator">*</span></label>
+          <input type="text" class="edu-degree" data-required="true" />
+        </div>
+        <div class="form-group">
+          <label>Dates <span class="required-indicator">*</span></label>
+          <input type="text" class="edu-dates" data-required="true" placeholder="Sep 2023 – Jun 2028" />
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Description</label>
+        <textarea class="edu-description" rows="3"
+          placeholder="GPA, distinctions, relevant notes..."></textarea>
+      </div>
+    </div>
+  </template>
+
+  <template id="experience-template">
+    <div class="multi-item experience-item">
+      <div class="multi-item-header">
+        <h4>Experience Entry</h4>
+        <button type="button" class="remove-item-btn" aria-label="Remove experience entry">Remove</button>
+      </div>
+      <div class="form-grid">
+        <div class="form-group">
+          <label>Role / Title <span class="required-indicator">*</span></label>
+          <input type="text" class="exp-role" data-required="true" />
+        </div>
+        <div class="form-group">
+          <label>Organization <span class="required-indicator">*</span></label>
+          <input type="text" class="exp-organization" data-required="true" />
+        </div>
+      </div>
+      <div class="form-grid">
+        <div class="form-group">
+          <label>Dates <span class="required-indicator">*</span></label>
+          <input type="text" class="exp-dates" data-required="true" placeholder="Sep 2024 – Present" />
+        </div>
+        <div class="form-group">
+          <label>Location</label>
+          <input type="text" class="exp-location" />
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Responsibilities / Achievements</label>
+        <textarea class="exp-details" rows="3"
+          placeholder="List your main responsibilities..."></textarea>
+      </div>
+    </div>
+  </template>
+
+  <template id="project-template">
+    <div class="multi-item project-item">
+      <div class="multi-item-header">
+        <h4>Project Entry</h4>
+        <button type="button" class="remove-item-btn" aria-label="Remove project entry">Remove</button>
+      </div>
+      <div class="form-group">
+        <label>Project Title <span class="required-indicator">*</span></label>
+        <input type="text" class="proj-title" data-required="true" />
+      </div>
+      <div class="form-group">
+        <label>Context / Course</label>
+        <input type="text" class="proj-context" placeholder="Course or context" />
+      </div>
+      <div class="form-group">
+        <label>Description</label>
+        <textarea class="proj-description" rows="3"
+          placeholder="Short description of the project..."></textarea>
+      </div>
+    </div>
+  </template>
+
+  <template id="certification-template">
+    <div class="multi-item certification-item">
+      <div class="multi-item-header">
+        <h4>Certification Entry</h4>
+        <button type="button" class="remove-item-btn" aria-label="Remove certification entry">Remove</button>
+      </div>
+      <div class="form-group">
+        <label>Certification Title <span class="required-indicator">*</span></label>
+        <input type="text" class="cert-title" data-required="true" />
+      </div>
+      <div class="form-group">
+        <label>Issuer / Organization</label>
+        <input type="text" class="cert-issuer" />
+      </div>
+      <div class="form-grid">
+        <div class="form-group">
+          <label>Date</label>
+          <input type="text" class="cert-date" placeholder="Month Year" />
+        </div>
+        <div class="form-group">
+          <label>Link (optional)</label>
+          <input type="url" class="cert-link" placeholder="URL to certificate or transcript" />
+        </div>
+      </div>
+    </div>
+  </template>
+
+  <template id="volunteering-template">
+    <div class="multi-item volunteering-item">
+      <div class="multi-item-header">
+        <h4>Volunteering / Leadership Entry</h4>
+        <button type="button" class="remove-item-btn" aria-label="Remove volunteering entry">Remove</button>
+      </div>
+      <div class="form-group">
+        <label>Role / Activity <span class="required-indicator">*</span></label>
+        <input type="text" class="vol-role" data-required="true" />
+      </div>
+      <div class="form-group">
+        <label>Organization</label>
+        <input type="text" class="vol-organization" />
+      </div>
+      <div class="form-group">
+        <label>Details</label>
+        <textarea class="vol-details" rows="3"
+          placeholder="Short description of your role and activities..."></textarea>
+      </div>
+    </div>
+  </template>
+
+    <template id="skill-template">
+  <div class="multi-item skill-item">
+    <div class="multi-item-header">
+      <h4>Skill Category</h4>
+      <button type="button" class="remove-item-btn" aria-label="Remove skill entry">Remove</button>
+    </div>
+
+    <div class="form-group">
+      <label>Category <span class="required-indicator">*</span></label>
+      <input type="text" class="skill-title" data-required="true" />
+    </div>
+
+    <div class="form-group">
+      <label>Description</label>
+      <textarea class="skill-description" rows="3"
+        placeholder="List skills... each line becomes a bullet"></textarea>
+    </div>
+  </div>
+</template>
+  
+</body>
+</html>

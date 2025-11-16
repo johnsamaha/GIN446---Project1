@@ -1,0 +1,273 @@
+/* ---------- CV Entry – Layout & Form Styles ---------- */
+
+/* Reuse design tokens from styles.css (already loaded) */
+
+/* Layout: form + preview side by side */
+.cv-builder-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.4fr);
+  gap: var(--space-4);
+  align-items: flex-start;
+  
+}
+
+.article-content {
+    margin: 0 auto;
+    max-width: max-content;
+}
+
+/* On small screens: stacked */
+@media (max-width: 960px) {
+  .cv-builder-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .cv-preview-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .cv-preview-actions .btn,
+  .cv-preview-actions .btn-primary {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* Form section */
+.cv-builder-form h2 {
+  margin-bottom: var(--space-4);
+  
+}
+
+.form-intro {
+  font-size: var(--text-sm);
+  color: var(--neutral-600);
+  margin-bottom: var(--space-4);
+}
+
+/* Fieldset styling */
+.cv-fieldset {
+  border: 1px solid var(--neutral-200);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4);
+  margin-bottom: var(--space-4);
+}
+
+.cv-fieldset legend {
+  padding: 0 var(--space-2);
+  font-weight: 600;
+  color: var(--primary-700);
+}
+
+.fieldset-help {
+  font-size: var(--text-xs);
+  color: var(--neutral-500);
+  margin-bottom: var(--space-3);
+}
+
+/* Grid for fields */
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--space-4);
+  margin-bottom: var(--space-3);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.form-group label {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--neutral-700);
+}
+
+.form-group input,
+.form-group textarea {
+  border-radius: var(--radius-md);
+  border: 1px solid var(--neutral-300);
+  padding: var(--space-2) var(--space-3);
+  font-size: var(--text-sm);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--primary-500);
+  box-shadow: 0 0 0 2px rgba(14, 165, 233, 0.2);
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+/* Required indicator */
+.required-indicator {
+  color: #e11d48;
+}
+
+/* Errors */
+.form-group.has-error input,
+.form-group.has-error textarea {
+  border-color: #e11d48;
+}
+
+.field-error {
+  min-height: 1em;
+  font-size: var(--text-xs);
+  color: #e11d48;
+}
+
+/* Multi item groups */
+.multi-item {
+  border-radius: var(--radius-md);
+  border: 1px solid var(--neutral-200);
+  padding: var(--space-3);
+  margin-bottom: var(--space-3);
+  background: var(--neutral-50);
+}
+
+.multi-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-3);
+}
+
+.multi-item-header h4 {
+  font-size: var(--text-base);
+  margin-bottom: 0;
+}
+
+/* "Remove" buttons inside items */
+.remove-item-btn {
+  border: none;
+  background: transparent;
+  color: var(--neutral-500);
+  font-size: var(--text-xs);
+  cursor: pointer;
+  padding: var(--space-1) var(--space-2);
+  border-radius: var(--radius-full);
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.remove-item-btn:hover {
+  background: var(--neutral-200);
+  color: var(--neutral-800);
+}
+
+/* Small outline buttons for Add */
+.small-btn {
+  margin-top: var(--space-2);
+  font-size: var(--text-sm);
+  padding: var(--space-2) var(--space-4);
+}
+
+/* Actions */
+.form-actions {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  margin-top: var(--space-4);
+}
+
+.form-status-message {
+  font-size: var(--text-sm);
+  color: var(--neutral-600);
+}
+
+/* Preview zone */
+.cv-preview-wrapper {
+  position: relative;
+  
+}
+
+.cv-preview-actions {
+  display: flex;
+  gap: var(--space-3);
+  justify-content: flex-end;
+  margin-bottom: var(--space-4);
+}
+
+/* Ensure the two main buttons look good here */
+.cv-preview-actions .btn-primary {
+  position: static;
+  right: auto;
+}
+
+/* Hero section links */
+.hero-section a {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  color: white;
+  text-decoration: none;
+  padding: 2px 4px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.hero-section a:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.hero-section p {
+  color: white;
+}
+
+/* ---------- Print Styles (CV preview only) ---------- */
+
+@media print {
+  @page {
+    size: A4;
+    margin: 0mm;
+  }
+
+  /* Hide everything but the preview */
+  body {
+    background: white !important;
+  }
+
+  .header-glass,
+  .site-footer,
+  .back-to-top,
+  .page-header,
+  .cv-builder-form,
+  .cv-preview-actions {
+    display: none !important;
+  }
+
+  .card {
+    box-shadow: none !important;
+    border: none !important;
+  }
+
+  .cv-preview-wrapper {
+    box-shadow: none !important;
+    border: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  #cv-preview {
+    margin: 0;
+    padding: 5mm 10mm;
+  }
+
+  /* Keep hero nice in print */
+  .hero-section {
+    background: linear-gradient(135deg, var(--primary-500), var(--primary-700)) !important;
+    color: white !important;
+  }
+
+  /* Avoid breaking sections */
+  section {
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+  }
+}
