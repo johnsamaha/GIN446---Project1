@@ -1,0 +1,96 @@
+.data-table {
+  display: table;
+}
+
+
+
+.events-wrapper {
+  padding: var(--space-6);
+  border-radius: var(--radius-xl);
+  background: white;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--neutral-200);
+  margin-top: var(--space-6);
+  overflow-x: auto;
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  margin-bottom: var(--space-6);
+  align-items: center;
+}
+
+#searchInput,
+#categoryFilter {
+  padding: var(--space-3) var(--space-4);
+  border: 1px solid var(--neutral-300);
+  border-radius: var(--radius-lg);
+  font-size: var(--text-base);
+  outline: none;
+  background: var(--neutral-50);
+  transition: all 0.25s ease;
+  box-shadow: var(--shadow-sm);
+}
+
+/* Focus styling for input + dropdown */
+#searchInput:focus,
+#categoryFilter:focus {
+  border-color: var(--primary-500);
+  background: white;
+  box-shadow: var(--shadow-md);
+}
+
+/* Stretch search input slightly more */
+#searchInput {
+  flex: 1 1 300px;
+}
+
+/* Dropdown width fixed for consistency */
+#categoryFilter {
+  min-width: 220px;
+}
+
+/* -----------------------------------------------------------
+   Table Enhancements
+----------------------------------------------------------- */
+#eventsTable {
+  border-radius: var(--radius-xl) !important;
+  overflow: hidden;
+  margin-top: var(--space-4);
+}
+
+
+
+.data-table a {
+  color: var(--primary-600);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.data-table a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  #categoryFilter {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .events-wrapper {
+    padding: var(--space-4);
+  }
+
+  .data-table td,
+  .data-table th {
+    padding: var(--space-3);
+  }
+}
