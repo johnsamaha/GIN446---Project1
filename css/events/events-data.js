@@ -175,7 +175,7 @@ const EVENTS_DATA = [
   },
   {
     "eventName": "beforeunload",
-    "category": "UiEvent, \n  Event",
+    "category": "UiEvent, Event",
     "description": "Before a document is about to be unloaded",
     "supportedTags": "<body>",
     "reference": "https://www.w3schools.com/jsref/event_onbeforeunload.asp"
@@ -308,7 +308,7 @@ const EVENTS_DATA = [
   },
   {
     "eventName": "error",
-    "category": "ProgressEvent, \n  UiEvent, Event",
+    "category": "ProgressEvent, UiEvent, Event",
     "description": "An error has occurred while loading a file",
     "supportedTags": "<img>, <input type=\"image\">, <object>, <link>, and <script>",
     "reference": "https://www.w3schools.com/jsref/event_onerror.asp"
@@ -357,7 +357,7 @@ const EVENTS_DATA = [
   },
   {
     "eventName": "input",
-    "category": "InputEvent, \n  Event",
+    "category": "InputEvent, Event",
     "description": "An element gets user input",
     "supportedTags": "<input> and <textarea>",
     "reference": "https://www.w3schools.com/jsref/event_oninput.asp"
@@ -392,7 +392,7 @@ const EVENTS_DATA = [
   },
   {
     "eventName": "load",
-    "category": "UiEvent, \n  Event",
+    "category": "UiEvent, Event",
     "description": "An object has loaded",
     "supportedTags": "<body>, <frame>, <iframe>, <img>, <input type=\"image\">, <link>, <script>, <style>",
     "reference": "https://www.w3schools.com/jsref/event_onload.asp"
@@ -553,7 +553,7 @@ const EVENTS_DATA = [
   },
   {
     "eventName": "resize",
-    "category": "UiEvent, \n  Event",
+    "category": "UiEvent, Event",
     "description": "The document view is resized",
     "supportedTags": "<body>",
     "reference": "https://www.w3schools.com/jsref/event_onresize.asp"
@@ -567,7 +567,7 @@ const EVENTS_DATA = [
   },
   {
     "eventName": "scroll",
-    "category": "UiEvent, \nEvent",
+    "category": "UiEvent, Event",
     "description": "A scrollbar is being scrolled",
     "supportedTags": "<address>, <blockquote>, <body>, <caption>, <center>, <dd>, <dir>, <div>, <dl>, <dt>, <fieldset>, <form>, <h1> to <h6>, <html>, <li>, <menu>, <object>, <ol>, <p>, <pre>, <select>, <tbody>, <textarea>, <tfoot>, <thead>, <ul>",
     "reference": "https://www.w3schools.com/jsref/event_onscroll.asp"
@@ -595,8 +595,8 @@ const EVENTS_DATA = [
   },
   {
     "eventName": "select",
-    "category": "UiEvent, \n  Event",
-    "description": "User selects some text",
+    "category": "UiEvent, Event",
+    "description": "User selects some text",
     "supportedTags": "<input type=\"file\">, <input type=\"password\">, <input type=\"text\">, and <textarea>",
     "reference": "https://www.w3schools.com/jsref/event_onselect.asp"
   },
@@ -631,7 +631,7 @@ const EVENTS_DATA = [
   {
     "eventName": "timeupdate",
     "category": "Event",
-    "description": "The playing position has changed (the user \nmoves to a different point in the media)",
+    "description": "The playing position has changed (the user moves to a different point in the media)",
     "supportedTags": "<audio> and <video>",
     "reference": "https://www.w3schools.com/jsref/event_ontimeupdate.asp"
   },
@@ -679,7 +679,7 @@ const EVENTS_DATA = [
   },
   {
     "eventName": "unload",
-    "category": "UiEvent, \nEvent",
+    "category": "UiEvent, Event",
     "description": "A page has unloaded",
     "supportedTags": "<body>",
     "reference": "https://www.w3schools.com/jsref/event_onunload.asp"
