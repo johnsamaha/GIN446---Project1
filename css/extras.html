@@ -155,6 +155,255 @@ console.log(x);   // Output: 7
 <p>JavaScript also supports pre- and post-decrement (<code>--x</code> and <code>x--</code>) with similar rules — they decrease a variable’s value by one before or after evaluation respectively <a href=" https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Increment" target="_blank" rel="noopener" title="Read [R5.1] on Web Docs Mozilla" class="reference-link">[R5.1]</a>.</p>
 </details>
           </section>
+
+<!-- Q&A Section 6 -->
+          <section class="card article-section" id="Q&A6">
+  <details>
+    <summary><strong>What Does JavaScript’s <code>eval()</code> Function Do?</strong></summary>
+    <br>
+
+    <p>
+      The <code>eval()</code> method in JavaScript takes a string as its argument and executes it as code 
+      in the current execution context 
+      <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval" 
+         target="_blank" rel="noopener" 
+         title="Read [R6.1] on MDN Web Docs Mozilla" class="reference-link">[R6.1]</a>.
+    </p>
+
+    <p>
+      In JavaScript (ECMAScript), <code>eval()</code> is a global function (a property of the global object) 
+      that accepts a string. If the string contains an expression, <code>eval()</code> evaluates it and returns 
+      its value; if it contains statements, they are executed. For example:
+    </p>
+
+    <pre><code>
+let x = 2;
+let result = eval("3 * x + 1"); // result is 7
+    </code></pre>
+
+    <p>
+      However, using <code>eval()</code> is generally discouraged for both security and performance reasons: 
+      it can execute arbitrary code, bypasses engine optimizations, and is usually unnecessary since features 
+      like <code>JSON.parse()</code>, <code>Function()</code>, or dynamic imports provide safer alternatives 
+      <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval" 
+         target="_blank" rel="noopener" 
+         title="Read [R6.1] on MDN Web Docs Mozilla" class="reference-link">[R6.1]</a>, 
+      <a href="https://en.wikipedia.org/wiki/Eval" 
+         target="_blank" rel="noopener" 
+         title="Read [R6.2] on Wikipedia" class="reference-link">[R6.2]</a>.
+    </p>
+  </details>
+</section>
+
+<!-- Q&A Section 7 -->
+          <section class="card article-section" id="Q&A7">
+  <details>
+    <summary><strong>What Are Regular Expressions and How Do They Work in JavaScript and Python?</strong></summary>
+    <br>
+
+    <p>
+      Regular expressions (regex) are patterns that describe sets of strings. 
+      They are used for searching, matching, and manipulating text. 
+      Both JavaScript and Python include built-in regex support, though their APIs and syntax differ 
+      <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_expressions"
+         target="_blank" rel="noopener"
+         title="Read [R7.1] on MDN Web Docs Mozilla"
+         class="reference-link">[R7.1]</a>.
+    </p>
+
+    <p><strong>How They Work in JavaScript</strong></p>
+
+    <p>
+      A regular expression is a sequence of characters forming a search pattern.  
+      In JavaScript, regexes are objects created using either regex literals 
+      (e.g., <code>/abc/</code>) or the <code>RegExp</code> constructor.  
+      They interact with methods such as <code>test()</code>, <code>exec()</code>, 
+      <code>match()</code>, and <code>replace()</code> 
+      <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_expressions"
+         target="_blank" rel="noopener"
+         title="Read [R7.1] on MDN Web Docs Mozilla"
+         class="reference-link">[R7.1]</a>.
+    </p>
+
+    <p><strong>How They Work in Python</strong></p>
+
+    <p>
+      In Python, the <code>re</code> module provides regex functionality.  
+      It includes functions like <code>re.match()</code>, <code>re.search()</code>, 
+      <code>re.findall()</code>, and allows compiling patterns into regex objects 
+      for repeated use 
+      <a href="https://docs.python.org/3/howto/regex.html"
+         target="_blank" rel="noopener"
+         title="Read [R7.2] on Python Documentation"
+         class="reference-link">[R7.2]</a>.
+    </p>
+
+    <p>
+      Under the hood, modern regex engines compile patterns into byte-code or finite automata, 
+      and often rely on backtracking algorithms to match patterns efficiently 
+      <a href="https://docs.python.org/3/howto/regex.html"
+         target="_blank" rel="noopener"
+         title="Read [R7.2] on Python Documentation"
+         class="reference-link">[R7.2]</a>.
+    </p>
+
+  </details>
+</section>
+
+<!-- Q&A Section 8-->
+          <section class="card article-section" id="Q&A8">
+
+  <details>
+    <summary><strong>If You Modify a Variable Inside a <code>foreach</code> Loop, Does It Also Change the Original Array in PHP and Python?</strong></summary>
+    <br>
+
+    <p>
+      In PHP: modifying the loop variable inside <code>foreach</code> does not change the original array 
+      unless you iterate by reference (using <code>&amp;</code>) 
+      <a href="https://www.php.net/manual/en/control-structures.foreach.php"
+         target="_blank" rel="noopener"
+         title="Read [R8.1] on PHP Manual" class="reference-link">[R8.1]</a>.
+    </p>
+
+    <p>
+      In Python: the loop variable holds a copy of each item (or reference for mutable objects) 
+      but reassigning it does not change the original list; modifying a mutable element’s contents may 
+      <a href="https://www.geeksforgeeks.org/python/how-to-modify-a-list-while-iterating-in-python/"
+         target="_blank" rel="noopener"
+         title="Read [R8.2] on GeeksforGeeks" class="reference-link">[R8.2]</a>.
+    </p>
+
+    <p>
+      In PHP, the <code>foreach ($array as $value)</code> syntax assigns each element’s value to 
+      <code>$value</code> by value (a copy). To modify the original array element, you must use 
+      <code>foreach ($array as &amp;$value)</code> 
+      <a href="https://www.php.net/manual/en/control-structures.foreach.php"
+         target="_blank" rel="noopener"
+         title="Read [R8.1] on PHP Manual" class="reference-link">[R8.1]</a>.
+    </p>
+
+    <p>
+      In Python, <code>for item in list:</code> gives <code>item</code> a reference to the value; 
+      if the value is mutable (like a list), you can mutate it. 
+      But reassigning <code>item</code> (e.g., <code>item = …</code>) only changes the loop variable, not the list. 
+      Modifying the list by index (e.g., <code>list[i] = …</code>) changes the original 
+      <a href="https://www.geeksforgeeks.org/python/how-to-modify-a-list-while-iterating-in-python/"
+         target="_blank" rel="noopener"
+         title="Read [R8.2] on GeeksforGeeks" class="reference-link">[R8.2]</a>.
+    </p>
+  </details>
+</section>
+
+<!-- Q&A Section 9-->
+          <section class="card article-section" id="Q&A9">
+
+  <details>
+    <summary><strong>How much water does mining or a single “Thank You” message to ChatGPT cost?</strong></summary>
+    <br>
+
+    <p>
+      Mining (especially of data centres and AI infrastructure) uses substantial water for cooling and operations. 
+      For a single prompt to ChatGPT, estimates suggest only a few drops of water 
+      <a href="https://www.theverge.com/news/685045/sam-altman-average-chatgpt-energy-water"
+         target="_blank" rel="noopener"
+         title="Read [R9.1] on The Verge" class="reference-link">[R9.1]</a>.
+    </p>
+
+    <p>
+      Large data centres that power AI and mining operations consume enormous amounts of water for cooling. 
+      For example, a U.S. data centre may consume millions of gallons per day 
+      <a href="https://www.eesi.org/articles/view/data-centers-and-water-consumption"
+         target="_blank" rel="noopener"
+         title="Read [R9.2] on EESI" class="reference-link">[R9.2]</a>.
+    </p>
+
+    <p>
+      For ChatGPT queries, recent statements indicate each query uses approximately 
+      <strong>0.000085 gallons of water</strong> (about one-fifteenth of a teaspoon) 
+      and about <strong>0.34 Wh</strong> of energy 
+      <a href="https://www.theverge.com/news/685045/sam-altman-average-chatgpt-energy-water"
+         target="_blank" rel="noopener"
+         title="Read [R9.1] on The Verge" class="reference-link">[R9.1]</a>.
+    </p>
+
+    <p>
+      While the water cost for a single “thank you” message is minimal, the cumulative environmental footprint 
+      across millions of queries becomes non-trivial. This underscores why energy &amp; cooling efficiency 
+      is important in data-intensive computing tasks.
+    </p>
+  </details>
+</section>
+
+<!-- Q&A Section 10-->
+          <section class="card article-section" id="Q&A10">
+  <details>
+    <summary><strong>What is Local Storage in Web Browsers?</strong></summary>
+    <br>
+
+    <p>
+      Local Storage is a Web API provided by browsers which allows web applications to store key-value data 
+      on the client side that persists across sessions 
+      <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage"
+         target="_blank" rel="noopener"
+         title="Read [R10.1] on MDN Web Docs Mozilla" class="reference-link">[R10.1]</a>.
+    </p>
+
+    <p>
+      Introduced with HTML5, the Web Storage API includes <code>localStorage</code> and 
+      <code>sessionStorage</code>. <code>localStorage</code> allows storing data persistently across browser 
+      sessions, and the data remains until explicitly removed. It is synchronous and limited in size 
+      (typically ~5 MB per origin) 
+      <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage"
+         target="_blank" rel="noopener"
+         title="Read [R10.1] on MDN Web Docs Mozilla" class="reference-link">[R10.1]</a>.
+    </p>
+
+    <p>
+      Unlike cookies, data stored in <code>localStorage</code> is not sent with each HTTP request, which 
+      improves performance. Developers often use it for storing user preferences, caching small data sets, 
+      or offline web app state 
+      <a href="https://www.freecodecamp.org/news/web-storage-localstorage-vs-sessionstorage-in-javascript/"
+         target="_blank" rel="noopener"
+         title="Read [R10.2] on freeCodeCamp" class="reference-link">[R10.2]</a>.
+    </p>
+  </details>
+</section>
+
+<!-- Q&A Section 11-->
+          <section class="card article-section" id="Q&A11">
+  <details>
+    <summary><strong>How Do Websites Keep Your Passwords Secure?</strong></summary>
+    <br>
+
+    <p>
+      Websites protect passwords by never storing them as plain text; instead they store hashes (and salts) 
+      using secure hashing algorithms. Secure communication (HTTPS) and proper server configuration also 
+      play key roles 
+      <a href="https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html"
+         target="_blank" rel="noopener"
+         title="Read [R11.1] on OWASP" class="reference-link">[R11.1]</a>.
+    </p>
+
+    <p>
+      When you enter a password, the website typically takes that password, applies a cryptographic hash 
+      (often salted and iterated) and stores the resulting hash in its database. During login, the user’s 
+      password is hashed the same way and compared. This means even if the database is breached, attackers 
+      cannot easily recover the original passwords 
+      <a href="https://www.kaspersky.com/blog/how-to-store-passwords/49101/"
+         target="_blank" rel="noopener"
+         title="Read [R11.2] on Kaspersky" class="reference-link">[R11.2]</a>.
+    </p>
+
+    <p>
+      Modern guidance (e.g., from OWASP) recommends using slow hashing algorithms (e.g., bcrypt, Argon2), 
+      generating per-user salts, and securing the entire stack (HTTPS, server hardening) 
+      <a href="https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html"
+         target="_blank" rel="noopener"
+         title="Read [R11.1] on OWASP" class="reference-link">[R11.1]</a>.
+    </p>
+  </details>
+</section>
+
         </div>
 
         <!-- Article Footer -->
